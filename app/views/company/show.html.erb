@@ -1,0 +1,23 @@
+<div class="company container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="company-show-main col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="left-part col-xs-12 col-sm-6 col-md-6 col-lg-6">
+      <div class="logo-image col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <%= image_tag @company.image_path %>
+      </div>
+      <div class="documents col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <ul>
+          <li > О компании </li>
+          <li > Документы </li>
+          <li > Показать на карте </li>
+        </ul>
+      </div>
+    </div>
+    <div class="right-part col-xs-12 col-sm-6 col-md-6 col-lg-6">
+      <h2 class="text-center"> <%= @company.name %> </h2>
+      <p class="description"> <%= t('footer.lorem') %>
+      <span class='site'> Вэб-сайт: <%= link_to @company.website, "http://"+@company.website %> </span>
+    </div>
+  </div>
+  <div class="company-show-secondary col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  </div>
+</div>

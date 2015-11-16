@@ -1,0 +1,380 @@
+@import 'bootstrap';
+*{
+  padding: 0;
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  &:link{
+    text-decoration: none;
+  }
+  &:visited{
+    text-decoration: none;
+  }
+  &:active{
+    text-decoration: none;
+  }
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+.body-placeholder{
+  background-color: #CCC;
+}
+
+.container.header{
+  float: none;
+}
+.horline-header{
+  height: 5px;
+  float: none;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.horline-language-1, .horline-language-2{
+  float: none;
+  height: 5px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.horline-language-1{
+  background-color: #99FF99;
+}
+
+.horline-language-2{
+  background-color: #666666;
+}
+
+.search-form{
+  float: none;
+  border: 3px solid #6CF;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.header{
+  display: block;
+  & .logo{
+    background-color: #FFF;
+    & .image{
+    margin: 0 auto;
+    width: 50%;
+    height: 50%;
+    max-width: 200px;
+    max-height: 100px;
+    }
+  }
+  & .socials{
+    & ul{
+      padding: 0 0 0 30px;
+      margin: 0 auto;
+      display: block;
+      text-align: left;
+      margin-right: 25px;
+      line-height:35px;
+      & li{
+        display: inline-block;
+        margin:0px 10px 0px 10px;
+        height:100%;
+        & a{
+          background-color: blue;
+          & img{
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer.container{
+  background-color: #999;
+  float: none;
+  & .left{
+    border-right: 1px solid black;
+  }
+  & .logo{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    & img{
+      width: 200px;
+      height: 200px;
+      background-color: gray;
+    }
+  }
+    & .socials{
+      & ul{
+        padding: 0px;
+        margin: 0 auto;
+        display: block;
+        text-align: right;
+        margin-right: 25px;
+        & li{
+          display: inline-block;
+          margin:0px 10px 0px 10px;
+          height:100%;
+          & a{
+            background-color: blue;
+            & img{
+              width: 35px;
+              height: 35px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+.container.language{
+  float: none;
+  margin: 0 auto;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  & .text{
+    text-align: center;
+  }
+}
+.langs.container{
+  float: none;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  .list{
+    list-style: none;
+    & .item{
+      width: 45%;
+      display: inline-block;
+      &:before{
+        content: "";
+        border-color: transparent #111;
+        border-style: solid;
+        border-width: 0.35em 0 0.35em 0.45em;
+        display: block;
+        height: 0;
+        width: 0;
+        left: -1em;
+        top: 0.9em;
+        position: relative;
+      }
+    }
+  }
+}
+
+.categories.container{
+    float: none;
+    display: block;
+    & .items{
+      background-color: #CCC;
+    }
+}
+
+.categories.items{
+  padding: 0px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.category-item{
+  display: inline-block;
+  height: 50%;
+  border: 1px solid black;
+  padding: 0;
+  & .category-item-image{
+    padding: 10px;
+  }
+  & .name{
+    border-bottom: 1px solid black;
+  }
+  & .category-image-small{
+    width: 100%;
+    max-height: 100px;
+  }
+}
+.category.container{
+  float: none;
+}
+.subcategories.container{
+  float: none;
+}
+.companies.container{
+  float: none;
+}
+
+.category-item{
+  float: none;
+}
+.container{
+  float: none;
+}
+
+.center-wrapper{
+  background-color: #FFF;
+  min-height: 400px;
+  float: none;
+  margin: 0 auto;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.company-item{
+  position: relative;
+  padding: 0;
+  & .image{
+    padding: 10px;
+    & img{
+      width: 100%;
+    }
+  }
+}
+
+.subcategory-item{
+      border: 1px solid black;
+      max-height: 150px;
+  & .image{
+    & img{
+      width: 100%;
+    }
+  }
+}
+
+
+.almost-footer.container{
+  float: left;
+  display: block;
+  padding: 0;
+  & .left{
+    background-color: #66CCFF;
+  }
+  & .center{
+    background-color: #99FF99;
+  }
+  & .right{
+    background-color: #663399;
+  }
+  & .left, .center{
+    border-right: 1px solid black;
+  }
+  & .left, .center, .right{
+    & h3{
+      text-decoration: underline;
+    }
+    margin-top: 20px;
+    margin-bottom: 20px;
+    & span{
+      display: block;
+      text-align: left;
+    }
+  }
+}
+
+.second-row{
+  margin-top: 20px;
+  padding-top:10px;
+  padding-bottom: 10px;
+  line-height:35px;
+  background-color: #9F9;
+}
+
+.header.buttons{
+  & div{
+  border-left: 1px solid black;
+  padding: 0;
+  }
+  & span{
+    display: block;
+    width: 80%;
+    border: 3px solid gray;
+    border-radius: 10px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: green;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}
+
+.company-item{
+  & .company-wrapper{
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    float: none;
+    margin: 0 auto;
+    padding: 0;
+  }
+  & .text{
+    min-height: 100px;
+    padding:0;
+  }
+  & span{
+    display:block;
+    text-decoration: none;
+    text-align: left;
+  }
+  & .title{
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+.company-link{
+  display:block;
+  float: none;
+  background-color: #6BCCFF;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  & a{
+    color: black;
+    font-weight: 800;
+  }
+  &:hover{
+    background-color: green;
+    transition: 1.5s ease;
+  }
+}
+
+.company-show-main{
+  
+& .left-part{
+  border: 1px solid black;
+  margin-top: 15px;
+    & .logo-image{
+      border-right: 1px solid black;
+      & img{
+        width: 100%;
+      }
+    }
+    & .documents{
+      float: left;
+    }
+  }
+  
+& .right-part{
+    & *{
+      margin-top: 15px;
+      display: block;
+    }
+    & h2{
+      display: block;
+      text-align: center;
+      text-decoration: underline;
+    }
+    & p{
+      text-align: left;
+      max-height: 400px;
+    }
+    & span{
+      text-align: left;
+      & a{
+        display: inline-block;
+      }
+    }
+  }
+}

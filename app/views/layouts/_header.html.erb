@@ -1,0 +1,53 @@
+<div class="container header col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="header row">
+    <div class="header logo col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <%= image_tag 'logo', class: "header logo image"%>
+      <div class="user-links">
+        <p class="navbar-text pull-right">
+          <% if user_signed_in? %>
+            Logged in as <strong> <%= current_user.email %> </strong>.
+            <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+          <% else %>
+            <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+            <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+          <% end %>
+      </div>
+    </div>
+    <div class="header second-row col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
+      <div class="header socials col-xs-12 col-sm-6 col-md-6 col-lg-6">
+      <ul class="list">
+        <li class="item">
+          <a href="http://facebook.com"><%= image_tag 'facebook.png', class: 'header socials image'%> </a>
+        </li>
+        <li class="item">
+          <a href="http://vk.com"><%= image_tag 'vk.png', class: 'header socials image'%> </a>
+        </li>
+        <li class="item">
+          <a href="http://twitter.com"><%= image_tag 'twitter.png', class: 'header socials image'%> </a>
+        </li>
+      </ul>  
+    </div>
+      <div class="header buttons col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="header buttons contact col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <span> Contact </span>
+        </div>
+        <div class="header buttons signup col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <span> Sign Up </span>
+        </div>
+        <div class="header buttons about col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <span> About Us </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="search-form text-center col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>  
+</div>
+<div class="horline-header col-xs-12 col-sm-12 col-md-12 col-lg-12">
+</div>

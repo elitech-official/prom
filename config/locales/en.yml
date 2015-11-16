@@ -1,0 +1,28 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+en:
+  main:
+    help: Help
+    rights: Rights info
+    tos: Terms of Use
+    blog: Blog
+  footer:
+    lorem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis consectetur lorem. Nullam feugiat tellus sit amet ligula sodales, vitae iaculis magna facilisis. Praesent viverra felis ut scelerisque fermentum. Aenean vitae tellus finibus, sodales metus a, lobortis tortor. Suspendisse porttitor dolor eget tincidunt sollicitudin. Suspendisse ac dolor cursus, faucibus libero nec, imperdiet erat. Sed mattis suscipit turpis. Suspendisse potenti. Fusce quis eleifend leo. Donec venenatis sapien magna, vitae suscipit ipsum porttitor quis. Ut nec consequat nisl. Ut at felis ultrices lacus euismod consectetur. Donec ullamcorper augue in neque vestibulum, vitae elementum felis cursus. Vivamus scelerisque lorem sit amet ligula aliquam, a luctus enim consectetur. Donec nulla tortor, finibus in lorem id, luctus aliquet elit."

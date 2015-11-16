@@ -1,0 +1,25 @@
+<div class="categories container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="categories items col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <h2 class="block text-center col-xs-12 col-sm-12 col-md-12 col-lg-12"> На нашем сайте представлены предприятия следующих типов промышленности: </h2>
+    <% @categories.each do |cat|%>
+    <%= render partial: "category", locals: {cat: cat}%>
+    <% end %>
+    <div class="categories items pages text-center col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <%= will_paginate @categories %>
+    </div>
+  </div>
+  <div class="almost-footer container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="almost-footer text-center left col-xs-12 col-sm-4 col-md-4 col-lg-4">
+      <h3> Что это за сайт? </h3>
+      <span class="text-left"> <%= t('footer.lorem') %> </span>
+    </div>
+    <div class="almost-footer text-center center col-xs-12 col-sm-4 col-md-4 col-lg-4">
+      <h3> Таргет-группа </h3>
+      <span class="text-left"> <%= t('footer.lorem') %> </span>
+    </div>
+    <div class="almost-footer text-center right col-xs-12 col-sm-4 col-md-4 col-lg-4">
+      <h3> В чём профит? </h3>
+      <span class="text-left"> <%= t('footer.lorem') %> </span>
+    </div>
+  </div>
+</div>
