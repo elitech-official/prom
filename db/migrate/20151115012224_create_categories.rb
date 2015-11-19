@@ -1,8 +1,8 @@
 class CreateCategories < ActiveRecord::Migration
   def change
     create_table :categories do |t|
-      t.string :name
-      t.string :image_path
+      t.string :name, :limit => 100
+      t.string :image_path, :limit => 100
       t.timestamps null: false
     end
   end

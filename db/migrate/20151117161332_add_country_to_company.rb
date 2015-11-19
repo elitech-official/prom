@@ -1,6 +1,6 @@
 class AddCountryToCompany < ActiveRecord::Migration
   def up
-    add_column :companies, :country, :string
+    add_column :companies, :country, :string, :limit => 100
   end
   
   def down
