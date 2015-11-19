@@ -7,31 +7,15 @@
 # Mayor.create(name: 'Emanuel', city: cities.first) 
 Category.create!( 
 name: "Машиностроение", 
-image_path: "categories/cat1" 
-) 
-Category.create!( 
-name: "Cельское хозяйство", 
-image_path: "categories/cat1" 
-) 
-Category.create!( 
-name: "Пишевая промышленность", 
-image_path: "categories/cat1" 
-) 
-Category.create!( 
-name: "Лёгкое машиностроение", 
-image_path: "categories/cat1" 
-) 
-Category.create!( 
-name: "Самолётостроение", 
-image_path: "categories/cat1" 
+image_path: "categories/cat1.jpg" 
 ) 
 Category.create!( 
 name: "Промышленность связи", 
-image_path: "categories/cat2" 
+image_path: "categories/cat2.jpg" 
 ) 
 Category.create!( 
 name: "Текстиль и одежда", 
-image_path: "categories/cat3" 
+image_path: "categories/cat3.jpg" 
 ) 
 
 Subcategory.create!( 
