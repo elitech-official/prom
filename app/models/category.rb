@@ -7,7 +7,4 @@ class Category < ActiveRecord::Base
     presence: true
   )
   
-  searchable do
-    text :name
-  end
 end
