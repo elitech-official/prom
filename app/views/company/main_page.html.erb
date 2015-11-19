@@ -1,0 +1,77 @@
+ <%= render layout: 'company/show' do %> 
+  <div class="websites col-xs-10 col-sm-10 col-md-10 col-lg-10">
+    <h3> Вэбсайты компании: </h3>
+    <%= 3.times do %>
+      <div class="website-item col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <%= image_tag @company.image_path %>
+        <p> cайт </p>
+      </div>
+    <% end %>
+  </div>
+  
+  <div class="company-item-catalogue toggler col-xs-10 col-sm-10 col-md-10 col-lg-10">
+    <table class="toggler-table"> <tr> <td class="text">Каталог продукции предприятия
+      </td> <td align="right">
+      <span class="glyphicon glyphicon-triangle-bottom" ></span>
+    </td></tr></table>
+    <div class="catalogue-wrapper hidden">
+      <%= 3.times do %>
+      <div class="catalogue-item col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <%= image_tag @company.image_path %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  
+  <div class="ribbon col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <table> <tr> <td>СЕКТОР ДЕЯТЕЛЬНОСТИ</td> </tr> </table>
+  </div>
+  
+  <div class="work-sector col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="images websites col-xs-10 col-sm-10 col-md-10 col-lg-10">
+        <h3> Изображения, предоставленные компанией </h3>
+        <%= 3.times do %>
+        <div class="attached-images website-item col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <%= image_tag @company.image_path %>
+        </div>
+        <% end %>
+      </div>
+  </div>
+  
+  <div class="toggler col-xs-10 col-sm-10 col-md-10 col-lg-10">
+     <table class="toggler-table"> <tr> <td class="text">Ключевые слова, связанные с компанией
+     </td> <td align="right">
+    <span class="glyphicon glyphicon-triangle-bottom" ></span>
+    </td></tr></table>
+  </div>  
+
+  <div class="keywords  hidden col-xs-12 col-sm-12 col-md-12 col-lg-12">   
+    <div class="keywords-items col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <%= 10.times do %>
+      <div class="keyword">
+        <span> Ключевое слово </span>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  
+  <div class="additional-info col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="ribbon col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <table> <tr> <td>ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ</td> </tr> </table>
+    </div>
+    <div class="info-item year hidden col-xs-4 col-sm-4 col-md-4 col-lg-4">
+      <span> Год создания предприятия </span>
+      <span> <%= @company.year_created.nil? ? "Не указано" : @company.year_created %>
+    </div>
+    <div class="info-item type hidden col-xs-4 col-sm-4 col-md-4 col-lg-4">
+      <span> Тип предприятия </span>
+        <%= image_tag 'comp-type.png'%>
+      <span> <%= @company.comp_type.nil? ? "Не указано" : @company.comp_type %>
+    </div>
+    <div class="info-item business hidden col-xs-4 col-sm-4 col-md-4 col-lg-4">
+      <span> Основной бизнес </span>
+      <%= image_tag 'business.png'%>
+      <span> <%= @company.business.nil? ? "Не указано" : @company.business %>
+    </div>
+  </div>
+<% end %>

@@ -1,17 +1,20 @@
-  <div class="company-item col-xs-6 col-sm-4 col-md-3 col-lg-3">
-    <div class="company-wrapper col-xs-10 col-sm-10 col-md-10 col-lg-10">
-      <div class="image col-xs-12 col-sm-6 col-md-6 col-lg-6">
+<div class="company-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class=" company-item-title col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <%= link_to company.name, company_path(id: company.id) %>
+      </div> 
+      <div class="company-item-image col-xs-12 col-sm-3 col-md-3 col-lg-3">
         <%= image_tag company.image_path %>
       </div>
-      
-      <div class=" text text-left col-xs-12 col-sm-6 col-md-6 col-lg-6">
-        <span class="text-left title"> <%= company.name %> </span>
-        <span class="text-left"> <%= company.address %> </span>
+      <div class="company-item-text col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <p class="description"> <%= company.description %> </p>
+        <p class="what-do"> What we do </p>
       </div>
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <span class="company-link">
-          <a href="<%= company_path(id: company.id)%>" class="company link"> See more... </a>
-        </span>
+      <a href="http://<%= company.website %>">
+        <div class="company-item-website col-xs-12 col-sm-3 col-md-3 col-lg-3">
+          <%= image_tag company.website_image_path%>
+        </div>
+      </a>
+      <div class="company-item-address text-left col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <p> <%= company.address%> - <%= company.country %> </p>
       </div>
-    </div>
-  </div>
+</div>

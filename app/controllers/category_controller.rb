@@ -3,7 +3,7 @@ class CategoryController < ApplicationController
   before_action :authenticate_user!
   
   def index
-    @categories = Category.all.paginate(:page => params[:page], :per_page => 8)
+    @categories = Category.all.paginate(:page => params[:page], :per_page => 10)
   end
   
   def new

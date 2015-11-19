@@ -23,4 +23,16 @@ class CompanyController < ApplicationController
 
   def delete
   end
+  
+  def map
+    render 'map'
+  end
+  
+  def main_page
+    render 'main_page'
+  end
+  
+  def documents
+    render 'documents'
+  end
 end

@@ -9,6 +9,9 @@ Rails.application.routes.draw do
     resources :subcategory
     get '/main', to: 'pages#main', as: :localized_main
     get '/search', to: 'search#perform', as: :search
+    get '/company/:id/map', to: 'company#map', as: :comp_map
+    get '/company/:id/about', to: 'company#main_page', as: :comp_about
+    get '/company/:id/documents', to: 'company#documents', as: :comp_docs
   end
   
   get '/:locale' => 'pages#index'
