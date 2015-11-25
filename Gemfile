@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.2'
+ruby '2.2.3'
 gem 'rails', '4.2.0'
 gem 'mysql2', '~> 0.3.18'
 gem 'sass-rails', '~> 5.0'
@@ -36,6 +36,8 @@ gem 'capistrano-rvm'
 gem 'passenger'
 gem 'faker'
 gem 'simple_captcha2', require: 'simple_captcha'
+gem 'wicked'
+
 group :assets do
   gem 'execjs'
   gem 'therubyracer'

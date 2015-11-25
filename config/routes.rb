@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => "user"}
   get 'search/perform'
 
   scope "(:locale)", locale: /en|fr|ru|ua/ do
