@@ -1,6 +1,8 @@
-class CategoryController < ApplicationController
+class CategoriesController < ApplicationController
   
   before_action :authenticate_user!
+  
+  respond_to  :html, :json
   
   def index
     @categories = Category.all.paginate(:page => params[:page], :per_page => 10)
@@ -29,6 +31,11 @@ class CategoryController < ApplicationController
   
   def delete
     
+  end
+  
+  def get_subcategories
+    category = Category.find(params[:category_id])
+       render :json => category.subcategories
   end
   
   

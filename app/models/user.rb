@@ -7,4 +7,9 @@ class User < ActiveRecord::Base
   has_one :company
   has_one :code       
   
+  def is_admin?
+    return self.admin
+  end
+  
+  
 end

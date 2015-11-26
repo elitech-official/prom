@@ -1,21 +1,22 @@
 Rails.application.routes.draw do
 
-  devise_for :users, :controllers => {:registrations => "user"}
+  ActiveAdmin.routes(self)
+  devise_for :users, :controllers => {:registrations => "users"}
   get 'search/perform'
 
   scope "(:locale)", locale: /en|fr|ru|ua/ do
-    resources :category
-    resources :company
-    resources :subcategory
+    resources :categories
+    resources :companies
+    resources :subcategories
     get '/main', to: 'pages#main', as: :localized_main
     get '/search', to: 'search#perform', as: :search
-    get '/company/:id/map', to: 'company#map', as: :comp_map
-    get '/company/:id/about', to: 'company#main_page', as: :comp_about
-    get '/company/:id/documents', to: 'company#documents', as: :comp_docs
+    get '/companies/:id/map', to: 'company#map', as: :comp_map
+    get '/companies/:id/about', to: 'company#main_page', as: :comp_about
+    get '/companies/:id/documents', to: 'company#documents', as: :comp_docs
   end
   
   get '/:locale' => 'pages#index'
-  
+  get "categories/:category_id/subcategories" => "categories#get_subcategories", :as => "get_subcategories", :format => :json
   root to: 'pages#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

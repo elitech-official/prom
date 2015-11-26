@@ -1,0 +1,94 @@
+<%= form_for @company, :html => {:multipart => true } do |f| %>
+  
+  <%= @company.errors.full_messages.each do |msg| %>
+    <p>
+      <%= msg %>
+    </p>
+  <% end %>
+ 
+	<p>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	</p>
+	
+	 <%= f.hidden_field :user_id, :value => current_user.id %>
+	 
+	<p>
+	<%= f.label :category, "Departure Date"%>
+	<%= select_tag :category_id, options_from_collection_for_select(Category.all, "id", "name"), :prompt => "Выберите категорию" %><br>
+	</p>
+	<p> 
+	<%= select_tag :subcategory_id, options_from_collection_for_select([], "id", "name"),
+	                     "data-option-dependent" => true,
+	                     "data-option-observed" => "category_id",
+	                     "data-option-url" => "/categories/:category_id:/subcategories.json",
+	                     "data-option-key-method" => :nid,
+	                     "data-option-value-method" => :name %>
+	<br/>
+	
+	<p>
+	<%= f.label :description %>
+	<%= f.text_area :description %>
+	</p>
+	
+	<p>
+	<%= f.label :city%>
+	<%= select_tag :city, options_from_collection_for_select(City.all, "id", "name"), :prompt => "Выберите город" %>
+	</p>
+	<p>
+	<%= f.label :address %>
+	<%= f.text_field :address %>
+	</p>
+
+	<p>
+	<%= f.label :website %>
+	<%= f.text_field :website %>
+	<p> У вас нет вебсайта? Закажите его у нас! /ссылка на наш собственный сайт/ </p>
+	</p>
+	<p>
+	<%= f.label :description %>
+	<%= f.text_area :description %>
+	</p>
+	<p>
+	<%= f.label :phone %>
+	<%= f.text_field :phone %>
+	</p>
+
+		<% if current_user.code.reg_type >= 1 %>
+			<p>
+				Тип предприятия
+				<%= f.text_field :comp_type %>
+			</p>
+			<p>
+				 Год основания
+				<%= f.text_field:comp_type %>
+			</p>
+			<p>
+				Штат сотрудников
+				<%= f.text_field :employee_count %>
+			</p>
+			<p>
+				Годовой оборот
+				<%= f.text_field :budget %>
+			</p>
+			
+				<%= f.fields_for :company_images do |builder| %>
+			 
+				<%if builder.object.new_record? %>
+				 
+				<p>
+				<%= builder.label :caption, "Подпись" %>
+				<%= builder.text_field :caption %>
+				</p>
+				 
+				<p>
+				<%= builder.label :image, "Изображение" %>
+				<%= builder.file_field :photo %>
+				</p>
+				 
+				<% end %>
+			  <% end %>
+			<% end %>
+ 
+<p><%= f.submit "Submit" %> </p>
+<% end %>

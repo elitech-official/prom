@@ -1,4 +1,4 @@
-class SubcategoryController < ApplicationController
+class SubcategoriesController < ApplicationController
   
   before_action :authenticate_user!
   

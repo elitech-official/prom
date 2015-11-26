@@ -7,7 +7,7 @@
   <div class="subcategories container col-xs-12 col-sm-12 col-md-12 col-lg-12">
     <div class="something col-xs-12 col-sm-12 col-md-12 col-lg-12"> Доступны следующие подразделы: </div>
     <% @subcategories.each do |subcategory|%>
-    <%= render partial: 'subcategory/subcategory', locals: {subcategory: subcategory} %>
+    <%= render partial: 'subcategories/subcategory', locals: {subcategory: subcategory} %>
     <% end %>
   </div>
 </div>

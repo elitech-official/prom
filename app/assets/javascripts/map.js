@@ -1,8 +1,5 @@
 $(document).ready(function() {
   
-  $('#jsCarousel').jsCarousel({ onthumbnailclick: function(src) { alert(src); }, autoscroll: true });
-  
-  
   $('a#about').click( function(event){
     event.preventDefault(); // выключaем стaндaртную рoль элементa
     if ($(this).hasClass('active')) {}

@@ -431,6 +431,7 @@ DEPENDENCIES
   html2haml
   jbuilder (~> 2.0)
   jquery-rails
+  kaminari
   launchy
   letter_opener
   mysql2 (~> 0.3.18)
