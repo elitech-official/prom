@@ -3,7 +3,7 @@
 *{
   padding: 0;
   margin: 0;
-}
+  }
 
 
 
@@ -99,7 +99,6 @@ a{
     & img{
       max-width: 140px;
       max-height: 140px;
-      background-color: gray;
     }
   }
     & .socials{
@@ -242,7 +241,7 @@ a{
   box-shadow: 0 0 10px;
   & .company-item-title{
     font-weight: 900;
-    font-size: 2em;
+    font-size: 2vw;
     text-align: left;
     & img{
       width: 35px;
@@ -352,13 +351,12 @@ a{
 .header.buttons{
   & div{
     margin-top: 50px;
-  border-left: 1px solid black;
-  padding: 0;
+    padding: 0;
   }
   & span{
     font-family: impact;
     font-weight: 100;
-    font-size: 1.5em;
+    font-size: 1.5vw;
     letter-spacing: 2px;
     display: block;
     width: 80%;
@@ -475,7 +473,7 @@ a{
     }
     & .name{
       & span{
-        font-size: 2.5em;
+        font-size: 2.5vw;
         color: white;
       }
       margin-top: 20px;
@@ -523,7 +521,7 @@ a{
           height: 50px;
         }
         & .button-text{
-          font-size: 1.2em;
+          font-size: 1.2vw;
           font-weight: 600;
         }
         border-radius: 8px;
@@ -547,7 +545,7 @@ a{
           width: 100%;
           font-weight: 800;
           margin-bottom: 7px;
-          font-size: 1.2em;
+          font-size: 1.2vw;
         }
         & .address{
           display: block;
@@ -602,7 +600,7 @@ a{
       & p{
         display:block;
         background-color: #D3D3D3;
-        font-size: 1.3em;
+        font-size: 1.1vw;
         font-weight: 300;
         font-family: Impact;
       }
@@ -626,6 +624,7 @@ a{
     }
     & p{
       margin-top: 10px;
+      
     }
   }
 }
@@ -634,7 +633,7 @@ a{
     margin-bottom: 10px;
     background-color: cyan;
     color: black;
-    font-size: 1.3em;
+    font-size: 1.3vw;
     font-weight: 800;
     text-align: left;
   }
@@ -645,9 +644,9 @@ a{
   background-color: white;
   border: ridge 6px #C0C0C0;
   margin-left: 20px;
-  font-size: 1.2em;
+  font-size: 1.2vw;
   & span{
-    font-size: 1.2em;
+    font-size: 1.2vw;
   }
 }
 
@@ -699,7 +698,7 @@ td.glyph{
 
 .phone-classic, .phone-mobile{
   & .phone-number{
-    font-size: 1.2em;
+    font-size: 1.2vw;
   }
   & img{
     width: 100%;
@@ -725,18 +724,18 @@ td.glyph{
 }
 .wanna{
         display: block;
-        font-size: 1.5em;
+        font-size: 1.5vw;
         color: green;
         font-family: impact;
         letter-spacing: 3px;
       }
 .easy{
         display: block;
-        font-size: 1.2em;
+        font-size: 1.2vw;
         color: blue;
       }
 .register-link{
-  font-size: 1.5em;
+  font-size: 1.5vw;
   color: black;
   display: block;
   border: 5px solid green;
@@ -760,21 +759,21 @@ td.glyph{
     }
   }
   & .catalogue-item-text{
-    font-size: 1em;
+    font-size: 1vw;
     text-align: left;
   }
 }
 #header-title{
   display: inline-block;
   padding-left: 25px;
-  font-size: 3em;
+  font-size: 3vw;
   font-weight: 300;
   font-family: impact;
   letter-spacing: 2px;
   color: #191970;
 }
 span.name.block{
-  font-size: .8em;
+  font-size: .8vw;
   font-weight: 600;
 }
 .category-item-image{
@@ -806,7 +805,332 @@ span.name.block{
 span#year, span#comp_type, span#business{
   display: block;
   width: 100%;
-  font-size: 1.2em;
+  font-size: 1.2vw;
   font-weight: 600;
   text-align: centerl
 }
+
+                                /*--------Медиа запросы-------*/
+@media all and (max-width: 420px){
+ .header.socials{
+      text-align: center;
+      & span{
+      font-size: 7vw !important;
+   }
+ }
+ .header.buttons{
+      &  span{
+       font-size: 8vw;
+      }
+    }
+   .mobile{
+     float: none !important;
+     width: 100% !important;
+   }
+   
+   .logo-name{
+      min-height: 250px !important;
+    }
+   
+   .button{
+        & p{
+            font-size: 4vw !important;
+           }
+       }
+   .ultimate-company-wrapper{
+     margin-left: 0px;
+   } 
+
+   .website-item{
+  & p{
+    font-size: 4vw;
+    }
+  }
+  .company-item{
+    & a{
+      font-size:2.6vw;
+    }
+  }
+  
+   .transparent-image{
+      & a{
+       & img{
+         min-height: 80px;
+       }
+     }
+   }
+   .toggler{
+     & .toggler-table{
+       font-size:2.5vw;
+     }
+   }
+   .ribbon{
+     font-size:2.5vw;
+   }
+   .info-item{
+    & span{
+      font-size:2.6vw;
+    }
+    & #year{
+      font-size:2.6vw;
+    } 
+    & #comp_type{
+      font-size:2.6vw;
+    }
+    & #business{
+      font-size:2.6vw;
+    }
+   }
+   /*------sidebar------*/
+  .right-sidebar{
+    & .contacts{
+      & h3{
+        font-size:4.2vw;
+      }
+      & .send-contacts{
+                    
+         & .address-info{
+           & .title{
+             font-size:3.5vw;
+           }
+         }    
+      }
+      & .send-message{
+         & .button-f{
+            & table{
+              min-width: 35px;
+            }
+          }
+          & .button-text{
+            & .button-text-f{
+              font-size: 2.6vw;
+            }
+           }
+          }
+         }
+        }
+   .phones{
+     & .icon{
+       & img{
+         min-width: 35px;
+       }
+     }
+     & .phone-number{
+       font-size: 3.5vw;
+     }
+   }
+   .arrow{
+     & img{
+       display:none;
+      }
+    }
+    .wanna{
+      display:none;
+    }
+   .easy{
+     display:none;
+   }
+   .advert{
+     & .text{ width:100%;
+       & a{
+          font-size: 3.3vw;
+       }
+     }
+   }
+}
+@media all and (min-width: 421px) and (max-width: 768px){
+     .header.socials{
+        & span{
+          font-size: 3.5vw !important;
+          }
+        }
+     .header.buttons{
+      &  span{
+       font-size: 2.4vw;
+       }
+      }
+     .button{
+        & p{
+            font-size: 2.5vw !important;
+           }
+       }
+       
+    .right-sidebar{
+      & img{
+        width: 50%;
+            }
+          }
+    img{
+        max-width: 140px;
+        max-height: 140px;
+    }
+    .header.socials{
+        margin: 0 auto;
+        }
+   
+   .ultimate-company-wrapper{
+     margin-left: 0px;
+   }
+   .website-item{
+     & p{
+       font-size: 1.8vw;
+     }
+   }
+   
+    .transparent-image{
+     & a{
+       & img{
+         min-height: 100px;
+       }
+     }
+   }
+   .toggler{
+     & .toggler-table{
+       font-size:2vw;
+     }
+   }
+   .ribbon{
+     font-size:2vw;
+   }
+     
+   .info-item{
+    
+      & #year{
+        font-size:2.3vw;
+      } 
+      & #comp_type{
+        font-size:2.3vw;
+      }
+      & #business{
+        font-size:2.3vw;
+      }
+   }
+   /*------sidebar------*/
+  .right-sidebar{
+    & .contacts{
+      & h3{
+        font-size:3vw;
+      }
+      & .send-contacts{
+                  
+         & .address-info{
+           & .title{
+             font-size:2.5vw;
+           }
+         }    
+      }
+      & .send-message{
+         & .button-f{
+            & table{
+              max-width: 45px;
+            }
+          }
+          & .button-text{
+            & .button-text-f{
+              font-size: 2.4vw;
+            }
+           }
+          }
+         }
+        }
+   .phones{
+     & .icon{
+       & img{
+         max-width: 45px;
+       }
+     }
+     & .phone-number{
+       font-size: 2.5vw;
+     }
+   }
+   .arrow{
+     & img{
+       display:none;
+      }
+    }
+    .wanna{
+      display:none;
+    }
+   .easy{
+     display:none;
+   }
+   .advert{
+     & .text{ width:100%;
+       & a{
+          font-size: 3.3vw;
+       }
+     }
+   }
+   
+}
+ @media all and (min-width: 768px) and (max-width: 1280px){
+    .header.buttons{
+      &  span{
+       font-size: 1.2vw;
+       }
+     }
+     
+     .website-item{
+     & p{
+       font-size: 1.2vw;
+     }
+    }
+       /*------sidebar------*/
+  .right-sidebar{
+    & .contacts{
+      & h3{
+        font-size:1.3vw;
+      }
+      & .send-contacts{
+                  
+         & .address-info{
+           & .title{
+             font-size:1.2vw;
+           }
+         }    
+      }
+      & .send-message{
+         & .button-f{
+            & table{
+              min-width: 25px;
+            }
+          }
+          & .button-text{
+            & .button-text-f{
+              font-size: 1.1vw;
+            }
+           }
+          }
+         }
+        }
+   .phones{
+     & .icon{
+       & img{
+         min-width: 25px;
+       }
+     }
+     & .phone-number{
+       font-size: 1.3vw;
+     }
+   }
+   .arrow{
+     & img{
+       
+      }
+    }
+    .wanna{
+      font-size:1.1vw;
+    }
+   .easy{
+     font-size:1.2vw;
+   }
+   .advert{
+     & .text{width:65%;
+       & a{
+          font-size: 1vw;
+       }
+     }
+   }
+    
+   }
+   
