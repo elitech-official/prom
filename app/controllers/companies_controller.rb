@@ -20,6 +20,7 @@ class CompaniesController < ApplicationController
     if @company.save
       flash[:notice] = "Successfully created!"
       redirect_to @company
+      SiteMailer.register_email(current_user).deliver_now
     else
       render action: 'new'
     end
