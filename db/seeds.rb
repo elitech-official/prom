@@ -5,6 +5,18 @@
 # 
 # cities = City.create([( name: 'Chicago' ), ( name: 'Copenhagen' )]) 
 # Mayor.create(name: 'Emanuel', city: cities.first) 
+
+User.create!(
+  name: "Admin",
+  email: "admin@nooneknowswho.com",
+  password: "somepassword",
+  admin: true
+)
+
+City.create!(
+  name: "Харьков"
+)
+
 Category.create!( 
 name: "Машиностроение", 
 image_path: "categories/cat1.jpg" 

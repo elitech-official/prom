@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.2'
+ruby '2.2.3'
 gem 'rails', '4.2.0'
 gem 'mysql2', '~> 0.3.18'
 gem 'sass-rails', '~> 5.0'
@@ -10,6 +10,7 @@ gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'kaminari'
 gem 'jbuilder', '~> 2.0'
 gem 'activeadmin', github: 'activeadmin'
 gem 'sdoc', '~> 0.4.0', group: :doc
@@ -36,6 +37,8 @@ gem 'capistrano-rvm'
 gem 'passenger'
 gem 'faker'
 gem 'simple_captcha2', require: 'simple_captcha'
+gem 'wicked'
+
 group :assets do
   gem 'execjs'
   gem 'therubyracer'

@@ -1,6 +1,6 @@
 <div class="companies container col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
   <h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> В подразделе <%= @subcategory.name %> найдено <%= @subcategory.companies.count%> записей </h3>
   <% @subcategory.companies.each do |company|%>
-  <%= render partial: "company/company", locals: {company: company}%>
+  <%= render partial: "companies/company", locals: {company: company}%>
   <% end %>
 </div>
