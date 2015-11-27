@@ -69,9 +69,14 @@ Rails.application.configure do
   config.i18n.fallbacks = true
   config.action_mailer.delivery_method = :smtp
   # SMTP settings for gmail
+  config.action_mailer.default_url_options = { :host => 'www.elitech.in.ua' }
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default :charset => "utf-8"
   config.action_mailer.smtp_settings = {
    :address              => "smtp.gmail.com",
    :port                 => 587,
+   :domain                => 'www.elitech.in,ua',
    :user_name            => 'completelydifferentuser@gmail.com',
    :password             => 'default_password',
    :authentication       => "plain",
