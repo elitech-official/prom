@@ -12,7 +12,9 @@
 	</p>
 	
 	 <%= f.hidden_field :user_id, :value => current_user.id %>
-	 
+	<p>
+		<%= f.file_field :paper_image %>
+	</p>
 	<p>
 	<%= f.label :category, "Departure Date"%>
 	<%= f.select_tag :category_id, options_from_collection_for_select(Category.all, "id", "name"), :prompt => "Выберите категорию" %><br>

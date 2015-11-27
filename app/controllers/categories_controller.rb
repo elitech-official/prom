@@ -5,6 +5,7 @@ class CategoriesController < ApplicationController
   respond_to  :html, :json
   
   def index
+    @blogs = Blog.last(5).reverse
     @categories = Category.all.paginate(:page => params[:page], :per_page => 10)
   end
   

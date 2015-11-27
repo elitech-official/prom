@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 gem 'rails', '4.2.0'
+gem 'rmagick'
 gem 'mysql2', '~> 0.3.18'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -14,7 +15,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'activeadmin', github: 'activeadmin'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'paperclip', "~> 4.2"
-gem 'friendly_id', '~> 5.1.0'
+gem 'friendly_id'
 gem 'will_paginate', :git => 'git://github.com/mislav/will_paginate.git'
 gem 'sidekiq'
 gem 'sinatra', require: false
@@ -36,8 +37,9 @@ gem 'capistrano-rvm'
 gem 'passenger'
 gem 'faker'
 gem 'simple_captcha2', require: 'simple_captcha'
-gem 'wicked'
-
+gem 'forem', github: "radar/forem"
+gem 'forem-bootstrap', github: "radar/forem-bootstrap"
+gem 'forem-redcarpet', github: "radar/forem-redcarpet"
 group :assets do
   gem 'execjs'
   gem 'therubyracer'

@@ -20,8 +20,9 @@ index do
 end
   
   controller do
-    def permitted_params
-      params.permit :utf8, :_method, :authenticity_token, :commit, :id, :title, :name, :author, :created_at, :updated_at, blog: [:blog_image, :caption]
+    private
+    def blog_params
+      params.require(:blog).permit(:title, :author, :theme, :text, :thumb)
     end
   end
   
@@ -31,12 +32,7 @@ end
      f.input :text
    end
 
-   f.inputs "Blog image" do
-     f.semantic_fields_for :blog_image do |p|
-       p.input :blog_image, :as => :file, :label => "Image"
-       p.input :_destroy, :as=>:boolean, :required => false, :label => 'Remove image'
-     end 
-   end
+   f.input :thumb, :required => false, :as => :file
 
    f.inputs "Product details" do
      f.input :author
@@ -44,5 +40,7 @@ end
    end
    f.actions
  end
+  
+  
   
 end
