@@ -37,9 +37,6 @@ gem 'capistrano-rvm'
 gem 'passenger'
 gem 'faker'
 gem 'simple_captcha2', require: 'simple_captcha'
-gem 'forem', github: "radar/forem"
-gem 'forem-bootstrap', github: "radar/forem-bootstrap"
-gem 'forem-redcarpet', github: "radar/forem-redcarpet"
 group :assets do
   gem 'execjs'
   gem 'therubyracer'
