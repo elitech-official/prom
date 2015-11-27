@@ -15,14 +15,14 @@
 	 
 	<p>
 	<%= f.label :category, "Departure Date"%>
-	<%= select_tag :category_id, options_from_collection_for_select(Category.all, "id", "name"), :prompt => "Выберите категорию" %><br>
+	<%= f.select_tag :category_id, options_from_collection_for_select(Category.all, "id", "name"), :prompt => "Выберите категорию" %><br>
 	</p>
 	<p> 
-	<%= select_tag :subcategory_id, options_from_collection_for_select([], "id", "name"),
+	<%= f.select_tag :subcategory_id, options_from_collection_for_select([], "id", "name"),
 	                     "data-option-dependent" => true,
 	                     "data-option-observed" => "category_id",
 	                     "data-option-url" => "/categories/:category_id:/subcategories.json",
-	                     "data-option-key-method" => :nid,
+	                     "data-option-key-method" => :id,
 	                     "data-option-value-method" => :name %>
 	<br/>
 	
@@ -46,15 +46,11 @@
 	<p> У вас нет вебсайта? Закажите его у нас! /ссылка на наш собственный сайт/ </p>
 	</p>
 	<p>
-	<%= f.label :description %>
-	<%= f.text_area :description %>
-	</p>
-	<p>
 	<%= f.label :phone %>
 	<%= f.text_field :phone %>
 	</p>
 
-		<% if current_user.code.reg_type >= 1 %>
+		<% if !current_user.code.nil? && current_user.code.reg_type >= 1 %>
 			<p>
 				Тип предприятия
 				<%= f.text_field :comp_type %>

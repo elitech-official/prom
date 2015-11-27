@@ -10,16 +10,16 @@ class CompaniesController < ApplicationController
   def new
     @company = Company.new
     @categories = Category.all
-      if current_user.code.reg_type >= 1
+      if !current_user.code.nil? && current_user.code.reg_type >= 1
         10.times {@company.company_images.build}
       end
   end
 
   def create
-    @company = Company.new(params[:company])
+    @company = Company.create!(company_params)
     if @company.save
       flash[:notice] = "Successfully created!"
-      redirect_to @company
+      redirect_to categories_path
       SiteMailer.register_email(current_user).deliver_now
     else
       render action: 'new'
@@ -56,13 +56,9 @@ class CompaniesController < ApplicationController
   def delete
   end
   
-
-  
-  private
-  
   def company_params
     params.require(:company).permit(:name, :category_id, :phone, :website, :address, :budget, :employee_count, :subcategory_id, :image_path, :description, :country,
-     :year_created, :comp_type, :business, :website_image_path, :mobile_phone, :user_id)
+     :year_created, :comp_type, :business, :website_image_path, :mobile_phone, :user_id, :city)
   end
   
 end
