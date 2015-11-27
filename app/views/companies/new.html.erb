@@ -5,22 +5,27 @@
       <%= msg %>
     </p>
   <% end %>
- 
-	<p>
-	<%= f.label :name %>
-	<%= f.text_field :name %>
+ <div class="user-wrap container">
+ 	<div class="user-name row col-sm-12 col-md-10 col-lg-10" >
+	<p class="place-zone place-name">
+	<!--<%= f.label :name, :class => "place"%>-->
+	<%= f.text_field :name, :placeholder => "Name", :class => "col-xs-12 col-sm-6 col-md-6 col-lg-6"%>
 	</p>
 	
 	 <%= f.hidden_field :user_id, :value => current_user.id %>
+
 	<p>
 		<%= f.file_field :paper_image %>
 	</p>
-	<p>
-	<%= f.label :category, "Departure Date"%>
-	<%= f.select_tag :category_id, options_from_collection_for_select(Category.all, "id", "name"), :prompt => "Выберите категорию" %><br>
+	
+
+	 
+	<p class="cat-name col-xs-6 col-sm-3 col-md-3 col-lg-3">
+		<%= f.select_tag :category_id, options_from_collection_for_select(Category.all, "id", "name"),:class => "place-cat", :prompt => "Выберите категорию" %><br>
+
 	</p>
-	<p> 
-	<%= f.select_tag :subcategory_id, options_from_collection_for_select([], "id", "name"),
+	<p class="sub-name col-xs-6 col-sm-3 col-md-3 col-lg-3"> 
+	<%= f.select_tag :subcategory_id,  options_from_collection_for_select([], "id", "name"), :class => "place-sub",
 	                     "data-option-dependent" => true,
 	                     "data-option-observed" => "category_id",
 	                     "data-option-url" => "/categories/:category_id:/subcategories.json",
@@ -29,45 +34,48 @@
 	<br/>
 	
 	<p>
-	<%= f.label :description %>
-	<%= f.text_area :description %>
+	<!-- <%= f.label :description ,:class => "place"%> -->
+	<%= f.text_area :description, :placeholder => "Description", :class => "place-text col-xs-12 col-sm-6 col-md-6 col-lg-6"%>
 	</p>
-	
+	</div>
+	<div class="user-place row col-xs-12 col-sm-12 col-md-10 col-lg-10">
 	<p>
-	<%= f.label :city%>
+	<%= f.label :city, :class => "place"%>
 	<%= select_tag :city, options_from_collection_for_select(City.all, "id", "name"), :prompt => "Выберите город" %>
 	</p>
 	<p>
-	<%= f.label :address %>
-	<%= f.text_field :address %>
+	<!-- <%= f.label :address, :class => "place" %> -->
+	<%= f.text_field :address, :placeholder => "Address", :class => "place-zone  col-xs-4 col-sm-4 col-md-4 col-lg-4" %>
+	</p>
+	
+	<p>
+	<!--  <%= f.label :phone, :class => "place" %> -->
+	<%= f.text_field :phone, :placeholder => "Phone", :class => "place-zone  col-xs-4 col-sm-4 col-md-4 col-lg-4" %>
 	</p>
 
-	<p>
-	<%= f.label :website %>
-	<%= f.text_field :website %>
-	<p> У вас нет вебсайта? Закажите его у нас! /ссылка на наш собственный сайт/ </p>
+	<p class="place-web">
+	<!-- <%= f.label :website, :class => "place"%> -->
+	<%= f.text_field :website, :placeholder => "Web site", :class => "place-zone  col-xs-4 col-sm-4 col-md-4 col-lg-4" %>
+	<p class="place-web-text"> У вас нет вебсайта? Закажите его у нас! /ссылка на наш собственный сайт/ </p>
 	</p>
-	<p>
-	<%= f.label :phone %>
-	<%= f.text_field :phone %>
-	</p>
-
-		<% if !current_user.code.nil? && current_user.code.reg_type >= 1 %>
+	
+  	</div>
+	<div class="user-company col-xs-12 col-sm-12 col-md-10 col-lg-10">
 			<p>
-				Тип предприятия
-				<%= f.text_field :comp_type %>
+				<!--Тип предприятия-->
+				<%= f.text_field :comp_type, :placeholder => "Type of company", :class => "place-gold col-xs-3 col-sm-3 col-md-3 col-lg-3" %>
 			</p>
 			<p>
-				 Год основания
-				<%= f.text_field:comp_type %>
+				 <!--Год основания-->
+				<%= f.text_field :comp_type, :placeholder => "Year", :class => "place-gold col-xs-3 col-sm-3 col-md-3 col-lg-3" %>
 			</p>
 			<p>
-				Штат сотрудников
-				<%= f.text_field :employee_count %>
+				<!-- Штат сотрудников -->
+				<%= f.text_field :employee_count, :placeholder => "employee", :class => "place-gold col-xs-3 col-sm-3 col-md-3 col-lg-3" %>
 			</p>
 			<p>
-				Годовой оборот
-				<%= f.text_field :budget %>
+				<!--Годовой оборот-->
+				<%= f.text_field :budget, :placeholder => "budget", :class => "place-gold col-xs-3 col-sm-3 col-md-3 col-lg-3" %>
 			</p>
 			
 				<%= f.fields_for :company_images do |builder| %>
@@ -75,8 +83,8 @@
 				<%if builder.object.new_record? %>
 				 
 				<p>
-				<%= builder.label :caption, "Подпись" %>
-				<%= builder.text_field :caption %>
+				<!--  <%= builder.label :caption, "Подпись" %>  -->
+				<%= builder.text_field :caption, :placeholder => "caption image", :class => "place-foto col-xs-4 col-sm-4 col-md-3 col-lg-3" %>
 				</p>
 				 
 				<p>
@@ -86,7 +94,8 @@
 				 
 				<% end %>
 			  <% end %>
-			<% end %>
+			
+ </div>
  
-<p><%= f.submit "Submit" %> </p>
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ><p><%= f.submit "Зарегистрироваться" %> </p></div>
 <% end %>

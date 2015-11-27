@@ -129,8 +129,7 @@ a{
   border-radius:10px;
   float: none;
   margin: 0 auto;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+ 
   & .text{
   
     text-align: center;
@@ -230,8 +229,7 @@ a{
   min-height: 1200px;
   float: none;
   margin: 0 auto;
-  border-left: 2px solid black;
-  border-right: 2px solid black;
+  
 }
 
 .company-item{
@@ -809,6 +807,50 @@ span#year, span#comp_type, span#business{
   font-weight: 600;
   text-align: centerl
 }
+
+.user-wrap{
+  & .user-name{
+    margin-bottom: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: #A8FA8E;
+    & .place-name{
+      margin:0px;
+      padding-top:15px;
+    }
+    & .cat-name{ }
+    & .place-text{
+      width: 90%;
+      height: 150px;
+      resize: none;
+      margin-bottom: 15px;
+    }
+  }
+  & .user-place{
+    border: 2px solid black;
+    border-radius: 10px;
+    background: #A8FA8E;
+    & .place-web{
+      & .place-web-text{
+        font-family:Tahoma;
+        font-size: 1.2vw;
+        
+      }
+    }
+    
+  }
+  & .user-company{
+    border: 2px solid black;
+    border-radius: 10px;
+    background: #A8FA8E;
+    margin-top:20px;
+    
+  }
+}
+
+
+
+
 
                                 /*--------Медиа запросы-------*/
 @media all and (max-width: 420px){
