@@ -10,9 +10,9 @@ class CompaniesController < ApplicationController
   def new
     @company = Company.new
     @categories = Category.all
-      if !current_user.code.nil? && current_user.code.reg_type >= 1
+      #if !current_user.code.nil? && current_user.code.reg_type >= 1
         10.times {@company.company_images.build}
-      end
+     # end
   end
 
   def create
