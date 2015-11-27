@@ -69,19 +69,18 @@ Rails.application.configure do
   config.i18n.fallbacks = true
   config.action_mailer.delivery_method = :smtp
   # SMTP settings for gmail
-  config.action_mailer.default_url_options = { :host => 'www.elitech.in.ua' }
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.default :charset => "utf-8"
-  config.action_mailer.smtp_settings = {
-   :address              => "smtp.gmail.com",
-   :port                 => 587,
-   :domain                => 'www.elitech.in,ua',
-   :user_name            => 'completelydifferentuser@gmail.com',
-   :password             => 'default_password',
-   :authentication       => "plain",
-  :enable_starttls_auto => true
-  }
+config.action_mailer.default_url_options = { :host => 'www.myapp.com' }
+config.action_mailer.raise_delivery_errors = true
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = {
+    :enable_starttls_auto => true,
+    :address => "smtp.gmail.com",
+    :port => 587,
+    :domain => "gmail.com",
+    :authentication => :login,
+    :user_name => "user@myapp.com",
+    :password => "mypassword"
+}
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify

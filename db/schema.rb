@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151126091908) do
+ActiveRecord::Schema.define(version: 20151127030505) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 255
@@ -36,12 +36,16 @@ ActiveRecord::Schema.define(version: 20151126091908) do
   end
 
   create_table "blogs", force: :cascade do |t|
-    t.string   "title",      limit: 255
-    t.text     "text",       limit: 65535
-    t.string   "theme",      limit: 255
-    t.string   "author",     limit: 255
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.string   "title",              limit: 255
+    t.text     "text",               limit: 65535
+    t.string   "theme",              limit: 255
+    t.string   "author",             limit: 255
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.string   "thumb_file_name",    limit: 255
+    t.string   "thumb_content_type", limit: 255
+    t.integer  "thumb_file_size",    limit: 4
+    t.datetime "thumb_updated_at"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -66,26 +70,30 @@ ActiveRecord::Schema.define(version: 20151126091908) do
   end
 
   create_table "companies", force: :cascade do |t|
-    t.string   "name",               limit: 100
-    t.string   "phone",              limit: 100
-    t.string   "website",            limit: 100
-    t.string   "address",            limit: 100
-    t.integer  "budget",             limit: 4
-    t.integer  "employee_count",     limit: 4
-    t.integer  "subcategory_id",     limit: 4
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
-    t.string   "image_path",         limit: 100
-    t.text     "description",        limit: 65535
-    t.string   "country",            limit: 100
-    t.integer  "year_created",       limit: 4
-    t.string   "comp_type",          limit: 100
-    t.string   "business",           limit: 100
-    t.string   "mobile_phone",       limit: 100
-    t.string   "website_image_path", limit: 100
-    t.integer  "user_id",            limit: 4
-    t.integer  "category_id",        limit: 4
-    t.string   "city",               limit: 255
+    t.string   "name",                     limit: 100
+    t.string   "phone",                    limit: 100
+    t.string   "website",                  limit: 100
+    t.string   "address",                  limit: 100
+    t.integer  "budget",                   limit: 4
+    t.integer  "employee_count",           limit: 4
+    t.integer  "subcategory_id",           limit: 4
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.string   "image_path",               limit: 100
+    t.text     "description",              limit: 65535
+    t.string   "country",                  limit: 100
+    t.integer  "year_created",             limit: 4
+    t.string   "comp_type",                limit: 100
+    t.string   "business",                 limit: 100
+    t.string   "mobile_phone",             limit: 100
+    t.string   "website_image_path",       limit: 100
+    t.integer  "user_id",                  limit: 4
+    t.integer  "category_id",              limit: 4
+    t.string   "city",                     limit: 255
+    t.string   "paper_image_file_name",    limit: 255
+    t.string   "paper_image_content_type", limit: 255
+    t.integer  "paper_image_file_size",    limit: 4
+    t.datetime "paper_image_updated_at"
   end
 
   create_table "company_images", force: :cascade do |t|

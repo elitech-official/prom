@@ -16,16 +16,17 @@
 </div>
 <div class="advertisement container col-xs-12 col-sm-4 col-md-4 col-lg-4">
   <div class="advert-header col-sm-12 col-md-12 col-lg-12">
-    <h3> Реламный блок </h3>
+    <h3> Новостной блог </h3>
   </div>
-  <div class="adv1 col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <%= image_tag 'advert1.jpg'%>
-  </div>
-  <div class="adv2 col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <%= image_tag 'advert2.jpg'%>
-  </div>
-  <div class="adv3 col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    
-  </div>
+  <%= @blogs.each do |blog| %>
+  	<div class="blog-container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  		<h3 class="blog-header"> <%= blog.title %> </h3>
+  		<%= image_tag blog.thumb, class: "blog-image"%>
+  		<p class="blog-text"> <%= blog.text%> </p>
+  		</br>
+  		<p class="blog-theme"> Theme: <%= blog.theme %> </p>
+  		<p class="blog-author"> Author: <%= blog.author %> </p>
+    </div>
+  <% end %>
   
 </div>
