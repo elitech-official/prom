@@ -76,7 +76,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
    :address              => "smtp.gmail.com",
    :port                 => 587,
-   :domain                => 'www.elitech.in,ua',
+   :domain                => 'gmail.com',
    :user_name            => 'completelydifferentuser@gmail.com',
    :password             => 'default_password',
    :authentication       => "plain",
