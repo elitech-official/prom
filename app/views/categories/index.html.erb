@@ -18,14 +18,16 @@
   <div class="advert-header col-sm-12 col-md-12 col-lg-12">
     <h3> Новостной блог </h3>
   </div>
-  <%= @blogs.each do |blog| %>
+  <% @blogs.each do |blog| %>
   	<div class="blog-container col-xs-12 col-sm-12 col-md-12 col-lg-12">
   		<h3 class="blog-header"> <%= blog.title %> </h3>
+  		<p class="blog-theme"> Theme: <%= blog.theme %> </p>
   		<%= image_tag blog.thumb, class: "blog-image"%>
   		<p class="blog-text"> <%= blog.text%> </p>
+  		<a class="blog-more"> Read more </a>
   		</br>
-  		<p class="blog-theme"> Theme: <%= blog.theme %> </p>
   		<p class="blog-author"> Author: <%= blog.author %> </p>
+  		<p class="blog-time"><%= blog.created_at %></p>
     </div>
   <% end %>
   

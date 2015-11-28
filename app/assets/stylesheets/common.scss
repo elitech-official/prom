@@ -807,17 +807,19 @@ span#year, span#comp_type, span#business{
   font-weight: 600;
   text-align: centerl
 }
+              /*  форма регистрации   */
 
 .user-wrap{
   & .user-name{
     margin-bottom: 20px;
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 10px;
-    background: #A8FA8E;
+    background: #EDF0EE;
     & .place-name{
       margin:0px;
       padding-top:15px;
-    }
+      
+     }
     & .cat-name{ }
     & .place-text{
       width: 90%;
@@ -826,29 +828,136 @@ span#year, span#comp_type, span#business{
       margin-bottom: 15px;
     }
   }
+
   & .user-place{
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 10px;
-    background: #A8FA8E;
-    & .place-web{
+    background: #EDF0EE;
       & .place-web-text{
         font-family:Tahoma;
         font-size: 1.2vw;
-        
+        display:block;
+        float:left; 
+        padding-top: 10px;      
       }
     }
-    
-  }
   & .user-company{
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 10px;
-    background: #A8FA8E;
+    background: #EDF0EE;
     margin-top:20px;
-    
+    margin-left: -15px;
+    & .type{
+      margin-top :10px;
+      }
+     & .user-image{
+       margin-top: 10px;
+        & p{
+          display:block;
+         }
+       }
+     } 
   }
+.user-image:firt-child{
+  float:left;
 }
-
-
+.place-zone{
+    & input{
+      border-width:1px;
+      border-radius:10px;
+      height: 50px;
+      }
+}
+.place-zone input:hover{
+   box-shadow: inset 0px 0px 7px 3px #D9FFE6;
+   }
+   
+.place-zone input:focus{
+   box-shadow: inset 0px 0px 7px 3px #D9FFE6;
+   }
+ .place-text{
+   border-width:1px;
+   border-radius:10px;
+ }
+ .place-text:hover{
+   box-shadow: inset 0px 0px 7px 3px #D9FFE6;
+   }
+   .place-text:focus{
+   box-shadow: inset 0px 0px 7px 3px #D9FFE6;
+   }
+ .place-foto{
+    & input{
+      border-width:1px;
+      border-radius:10px;
+      height: 35px;
+      }
+}  
+.place-foto input:hover{
+   box-shadow: inset 0px 0px 7px 3px #D9FFE6;
+   }
+ .place-foto input:focus{
+   box-shadow: inset 0px 0px 7px 3px #D9FFE6;
+   }
+   .button{
+     width:180px;
+     height:35px;
+    }
+   
+  .button :hover{
+   box-shadow: inset 0px 0px 7px 3px #D9FFE6;
+   }
+   .button:focus{
+   box-shadow: inset 0px 0px 7px 3px #66A3E8;
+   }
+      /*--------блог--------*/
+.advertisement{
+    & .advert-header{
+      font-style:Tahoma;
+      font-size: 1.5vw;
+    }
+    & .blog-container{
+      border: 1px solid black;
+      background: #CFD4D1;
+      border-radius: 10px;
+      position:relative;
+      margin-bottom: 15px;
+      
+      & .blog-header{
+        font-family: Tahoma;
+        font-size: 1.3vw;
+       }
+      & .blog-theme{
+         font-size: 1.2vw;
+      }
+      & .blog-image{
+        width:auto;
+        height:100px
+      }
+      & .blog-text{
+        padding-top: 10px;
+         font-size: 1.2vw;
+      }
+      & .blog-more{
+        font-size:1.2vw;
+        position:absolute;
+        right:10%;
+        top: 85%;
+      }
+      & .blog-author{
+         font-size: 1.1vw;
+         font-style:italic;
+         
+      }
+      & .blog-time{
+        position:absolute;
+        bottom:0;
+        right:10%;
+        font-size: 0.9vw;
+      }
+      
+      
+    }
+}
 
 
 
