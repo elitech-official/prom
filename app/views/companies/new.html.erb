@@ -8,24 +8,25 @@
  <div class="user-wrap container">
  	<div class="user-name row col-sm-12 col-md-10 col-lg-10" >
 	<p class="place-zone place-name">
-	<!--<%= f.label :name, :class => "place"%>-->
 	<%= f.text_field :name, :placeholder => "Name", :class => "col-xs-12 col-sm-6 col-md-6 col-lg-6"%>
 	</p>
 	
 	 <%= f.hidden_field :user_id, :value => current_user.id %>
 
 	<p>
-		<%= f.file_field :paper_image %>
+		<%= f.file_field :paper_image, :class => "col-xs-12 col-sm-6 col-md-6 col-lg-6" %>
 	</p>
 	
 
 	 
 	<p class="cat-name col-xs-6 col-sm-3 col-md-3 col-lg-3">
-		<%= f.select_tag :category_id, options_from_collection_for_select(Category.all, "id", "name"),:class => "place-cat", :prompt => "Выберите категорию" %><br>
+		<%= f.select_tag :category_id, options_from_collection_for_select(Category.all, "id", "name"),
+		:class => "place-cat", :prompt => "Выберите категорию" %><br>
 
 	</p>
 	<p class="sub-name col-xs-6 col-sm-3 col-md-3 col-lg-3"> 
-	<%= f.select_tag :subcategory_id,  options_from_collection_for_select([], "id", "name"), :class => "place-sub",
+	<%= f.select_tag :subcategory_id,  options_from_collection_for_select([], "id", "name"),
+	 :class => "place-sub",
 	                     "data-option-dependent" => true,
 	                     "data-option-observed" => "category_id",
 	                     "data-option-url" => "/categories/:category_id:/subcategories.json",
@@ -34,68 +35,84 @@
 	<br/>
 	
 	<p>
-	<!-- <%= f.label :description ,:class => "place"%> -->
-	<%= f.text_area :description, :placeholder => "Description", :class => "place-text col-xs-12 col-sm-6 col-md-6 col-lg-6"%>
+	<%= f.text_area :description, :placeholder => "Description",
+	 :class => "place-text col-xs-12 col-sm-6 col-md-6 col-lg-6"%>
 	</p>
 	</div>
 	<div class="user-place row col-xs-12 col-sm-12 col-md-10 col-lg-10">
 	<p>
-	<%= f.label :city, :class => "place"%>
-	<%= select_tag :city, options_from_collection_for_select(City.all, "id", "name"), :prompt => "Выберите город" %>
+	<%= select_tag :city, options_from_collection_for_select(City.all, "id", "name"),
+	 :prompt => "Выберите город" %>
 	</p>
-	<p>
-	<!-- <%= f.label :address, :class => "place" %> -->
-	<%= f.text_field :address, :placeholder => "Address", :class => "place-zone  col-xs-4 col-sm-4 col-md-4 col-lg-4" %>
+	<p class="place-zone">
+	<%= f.text_field :address, :placeholder => "Address",
+	 :class => "  col-xs-3 col-sm-3 col-md-3 col-lg-3" %>
 	</p>
+	<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
 	
-	<p>
-	<!--  <%= f.label :phone, :class => "place" %> -->
-	<%= f.text_field :phone, :placeholder => "Phone", :class => "place-zone  col-xs-4 col-sm-4 col-md-4 col-lg-4" %>
+	<p class="place-zone">
+	<%= f.text_field :phone, :placeholder => "Phone",
+	 :class => " col-xs-3 col-sm-3 col-md-3 col-lg-3" %>
 	</p>
-
-	<p class="place-web">
-	<!-- <%= f.label :website, :class => "place"%> -->
-	<%= f.text_field :website, :placeholder => "Web site", :class => "place-zone  col-xs-4 col-sm-4 col-md-4 col-lg-4" %>
-	<p class="place-web-text"> У вас нет вебсайта? Закажите его у нас! /ссылка на наш собственный сайт/ </p>
-	</p>
+	<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+	<p class="place-web place-zone ">
+	<%= f.text_field :website, :placeholder => "Web site",
+	 :class => " col-xs-3 col-sm-3 col-md-3 col-lg-3" %>
+	 </p>
+	 <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+		
+	 <p class="place-web-text"> У вас нет вебсайта? Закажите его у нас! /ссылка на наш собственный сайт/ </p>
 	
   	</div>
 	<div class="user-company col-xs-12 col-sm-12 col-md-10 col-lg-10">
-			<p>
-				<!--Тип предприятия-->
-				<%= f.text_field :comp_type, :placeholder => "Type of company", :class => "place-gold col-xs-3 col-sm-3 col-md-3 col-lg-3" %>
+		
+			<p class="place-zone type">
+				<%= f.text_field :comp_type, :placeholder => "Тип предприятия",
+				 :class => "place-zone place-gold col-xs-2 col-sm-2 col-md-2 col-lg-2" %>
 			</p>
-			<p>
-				 <!--Год основания-->
-				<%= f.text_field :comp_type, :placeholder => "Year", :class => "place-gold col-xs-3 col-sm-3 col-md-3 col-lg-3" %>
+			<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+			
+			<p class="place-zone">
+				 <%= f.text_field :comp_type, :placeholder => "Год основания",
+				 :class => " place-gold col-xs-2 col-sm-2 col-md-2 col-lg-2" %>
 			</p>
-			<p>
-				<!-- Штат сотрудников -->
-				<%= f.text_field :employee_count, :placeholder => "employee", :class => "place-gold col-xs-3 col-sm-3 col-md-3 col-lg-3" %>
+			
+			<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+			
+			<p class="place-zone">
+				<%= f.text_field :employee_count, :placeholder => "Штат сотрудников",
+				 :class => " place-gold col-xs-2 col-sm-2 col-md-2 col-lg-2" %>
 			</p>
-			<p>
-				<!--Годовой оборот-->
-				<%= f.text_field :budget, :placeholder => "budget", :class => "place-gold col-xs-3 col-sm-3 col-md-3 col-lg-3" %>
+			
+			<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+			
+			<p class="place-zone">
+				
+				<%= f.text_field :budget, :placeholder => "Годовой оборот",
+				 :class => " place-gold col-xs-2 col-sm-2 col-md-2 col-lg-2" %>
 			</p>
 			
 				<%= f.fields_for :company_images do |builder| %>
 			 
 				<%if builder.object.new_record? %>
-				 
-				<p>
-				<!--  <%= builder.label :caption, "Подпись" %>  -->
-				<%= builder.text_field :caption, :placeholder => "caption image", :class => "place-foto col-xs-4 col-sm-4 col-md-3 col-lg-3" %>
-				</p>
-				 
-				<p>
-				<%= builder.label :image, "Изображение" %>
+				
+				
+				<div class="user-image col-xs-5 col-sm-5 col-md-5 col-lg-5">
+				<p >
+				
 				<%= builder.file_field :photo %>
 				</p>
+				 <p class="place-foto">
+				 <%= builder.text_field :caption, :placeholder => "информация", :class => "place-f" %>
+				</p>
+				 
+				</div>
+				
 				 
 				<% end %>
 			  <% end %>
 			
  </div>
  
-<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ><p><%= f.submit "Зарегистрироваться" %> </p></div>
+<div class=" button col-xs-10 col-sm-10 col-md-10 col-lg-10" ><p><%= f.submit "Регистрация" %> </p></div>
 <% end %>
