@@ -807,108 +807,7 @@ span#year, span#comp_type, span#business{
   font-weight: 600;
   text-align: centerl
 }
-              /*  форма регистрации   */
 
-.user-wrap{
-  & .user-name{
-    margin-bottom: 20px;
-    border: 1px solid black;
-    border-radius: 10px;
-    background: #EDF0EE;
-    & .place-name{
-      margin:0px;
-      padding-top:15px;
-      
-     }
-    & .cat-name{ }
-    & .place-text{
-      width: 90%;
-      height: 150px;
-      resize: none;
-      margin-bottom: 15px;
-    }
-  }
-
-  & .user-place{
-    border: 1px solid black;
-    border-radius: 10px;
-    background: #EDF0EE;
-      & .place-web-text{
-        font-family:Tahoma;
-        font-size: 1.2vw;
-        display:block;
-        float:left; 
-        padding-top: 10px;      
-      }
-    }
-  & .user-company{
-    border: 1px solid black;
-    border-radius: 10px;
-    background: #EDF0EE;
-    margin-top:20px;
-    margin-left: -15px;
-    & .type{
-      margin-top :10px;
-      }
-     & .user-image{
-       margin-top: 10px;
-        & p{
-          display:block;
-         }
-       }
-     } 
-  }
-.user-image:firt-child{
-  float:left;
-}
-.place-zone{
-    & input{
-      border-width:1px;
-      border-radius:10px;
-      height: 50px;
-      }
-}
-.place-zone input:hover{
-   box-shadow: inset 0px 0px 7px 3px #D9FFE6;
-   }
-   
-.place-zone input:focus{
-   box-shadow: inset 0px 0px 7px 3px #D9FFE6;
-   }
- .place-text{
-   border-width:1px;
-   border-radius:10px;
- }
- .place-text:hover{
-   box-shadow: inset 0px 0px 7px 3px #D9FFE6;
-   }
-   .place-text:focus{
-   box-shadow: inset 0px 0px 7px 3px #D9FFE6;
-   }
- .place-foto{
-    & input{
-      border-width:1px;
-      border-radius:10px;
-      height: 35px;
-      }
-}  
-.place-foto input:hover{
-   box-shadow: inset 0px 0px 7px 3px #D9FFE6;
-   }
- .place-foto input:focus{
-   box-shadow: inset 0px 0px 7px 3px #D9FFE6;
-   }
-   .button{
-     width:180px;
-     height:35px;
-    }
-   
-  .button :hover{
-   box-shadow: inset 0px 0px 7px 3px #D9FFE6;
-   }
-   .button:focus{
-   box-shadow: inset 0px 0px 7px 3px #66A3E8;
-   }
       /*--------блог--------*/
 .advertisement{
     & .advert-header{
@@ -1032,62 +931,7 @@ span#year, span#comp_type, span#business{
       font-size:2.6vw;
     }
    }
-   /*------sidebar------*/
-  .right-sidebar{
-    & .contacts{
-      & h3{
-        font-size:4.2vw;
-      }
-      & .send-contacts{
-                    
-         & .address-info{
-           & .title{
-             font-size:3.5vw;
-           }
-         }    
-      }
-      & .send-message{
-         & .button-f{
-            & table{
-              min-width: 35px;
-            }
-          }
-          & .button-text{
-            & .button-text-f{
-              font-size: 2.6vw;
-            }
-           }
-          }
-         }
-        }
-   .phones{
-     & .icon{
-       & img{
-         min-width: 35px;
-       }
-     }
-     & .phone-number{
-       font-size: 3.5vw;
-     }
-   }
-   .arrow{
-     & img{
-       display:none;
-      }
-    }
-    .wanna{
-      display:none;
-    }
-   .easy{
-     display:none;
-   }
-   .advert{
-     & .text{ width:100%;
-       & a{
-          font-size: 3.3vw;
-       }
-     }
-   }
+  
 }
 @media all and (min-width: 421px) and (max-width: 768px){
      .header.socials{
@@ -1156,29 +1000,46 @@ span#year, span#comp_type, span#business{
         font-size:2.3vw;
       }
    }
-   /*------sidebar------*/
+
+}
+ @media all and (min-width: 768px) and (max-width: 1280px){
+    .header.buttons{
+      &  span{
+       font-size: 1.2vw;
+       }
+     }
+     
+     .website-item{
+     & p{
+       font-size: 1.2vw;
+     }
+    }
+  }
+   
+
+ /*------sidebar------*/
   .right-sidebar{
     & .contacts{
       & h3{
-        font-size:3vw;
+        font-size:4.2vw;
       }
       & .send-contacts{
-                  
+                    
          & .address-info{
            & .title{
-             font-size:2.5vw;
+             font-size:3.5vw;
            }
          }    
       }
       & .send-message{
          & .button-f{
             & table{
-              max-width: 45px;
+              min-width: 35px;
             }
           }
           & .button-text{
             & .button-text-f{
-              font-size: 2.4vw;
+              font-size: 2.6vw;
             }
            }
           }
@@ -1187,11 +1048,11 @@ span#year, span#comp_type, span#business{
    .phones{
      & .icon{
        & img{
-         max-width: 45px;
+         min-width: 35px;
        }
      }
      & .phone-number{
-       font-size: 2.5vw;
+       font-size: 3.5vw;
      }
    }
    .arrow{
@@ -1212,76 +1073,3 @@ span#year, span#comp_type, span#business{
        }
      }
    }
-   
-}
- @media all and (min-width: 768px) and (max-width: 1280px){
-    .header.buttons{
-      &  span{
-       font-size: 1.2vw;
-       }
-     }
-     
-     .website-item{
-     & p{
-       font-size: 1.2vw;
-     }
-    }
-       /*------sidebar------*/
-  .right-sidebar{
-    & .contacts{
-      & h3{
-        font-size:1.3vw;
-      }
-      & .send-contacts{
-                  
-         & .address-info{
-           & .title{
-             font-size:1.2vw;
-           }
-         }    
-      }
-      & .send-message{
-         & .button-f{
-            & table{
-              min-width: 25px;
-            }
-          }
-          & .button-text{
-            & .button-text-f{
-              font-size: 1.1vw;
-            }
-           }
-          }
-         }
-        }
-   .phones{
-     & .icon{
-       & img{
-         min-width: 25px;
-       }
-     }
-     & .phone-number{
-       font-size: 1.3vw;
-     }
-   }
-   .arrow{
-     & img{
-       
-      }
-    }
-    .wanna{
-      font-size:1.1vw;
-    }
-   .easy{
-     font-size:1.2vw;
-   }
-   .advert{
-     & .text{width:65%;
-       & a{
-          font-size: 1vw;
-       }
-     }
-   }
-    
-   }
-   
