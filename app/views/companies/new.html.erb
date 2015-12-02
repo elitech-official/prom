@@ -1,16 +1,11 @@
 <%= form_for @company, :html => {:multipart => true } do |f| %>
-  
-  <%= @company.errors.full_messages.each do |msg| %>
-    <p>
-      <%= msg %>
-    </p>
-  <% end %>
+
  <div class="user-wrap container">
  	<div class="user-name row col-xs-11 col-sm-11 col-md-11 col-lg-11" >
  		 <h3>Общая информация</h3>
  	<div class="name-wrap">
 		<p class="place-zone place-name">
-		<%= f.text_field :name, :placeholder => "Name"%>
+		<%= f.text_field :name, :placeholder => "Название предприятия"%>
 		</p>
 	</div>	 
 	 <%= f.hidden_field :user_id, :value => current_user.id %>
@@ -40,7 +35,7 @@
 		<p>
 	</div>	
 		
-	<%= f.text_area :description, :placeholder => "Description",
+	<%= f.text_area :description, :placeholder => "Описание предприятия",
 	 :class => "place-text"%>
 	</p>
 	</div>
@@ -54,17 +49,17 @@
 	</div>
 	<div class="addres-wrap">	
 		<p class="place-zone">
-		<%= f.text_field :address, :placeholder => "Address"%>
+		<%= f.text_field :address, :placeholder => "Адрес"%>
 		</p>
 	</div>
 	<div class="phone-wrap">		
 		<p class="place-zone">
-		<%= f.text_field :phone, :placeholder => "Phone" %>
+		<%= f.text_field :phone, :placeholder => "Контактный телефон" %>
 		</p>
 	</div>
 	<div class="phone-wrap">
 		<p class="place-web place-zone ">
-		<%= f.text_field :website, :placeholder => "Web site"%>
+		<%= f.text_field :website, :placeholder => "Адрес web-сайта"%>
 		 </p>
 	</div>	
 	 <p class="place-web-text"> У вас нет вебсайта? Закажите его у нас! /ссылка на наш собственный сайт/ </p>
@@ -123,7 +118,7 @@
 				<% end %>
 			  <% end %>
 			
-            </div
+          </div>
  
-<div class="button-comp" > <p><%= f.submit "Регистрация" %> </p> </div>
+<div class="button-comp col-xs-11 col-sm-11 col-md-11 col-lg-11 text-center"> <p><%= f.submit "Регистрация" %> </p> </div>
 <% end %>

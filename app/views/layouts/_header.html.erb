@@ -11,15 +11,15 @@
           <% end %>
       </div>
       <div class="header socials  col-xs-12 col-sm-6 col-md-6 col-lg-6">
-        <%= image_tag 'herb.png'%>
-        <span  id="header-title"> Бизнес Харьков </span>
+        <%= link_to image_tag('herb.png'), root_path %>
+        <span id="header-title"> Бизнес Харьков </span>
       </div>
       <div class="header buttons col-xs-12 col-sm-6 col-md-6 col-lg-6">
         <div class=" mobile contact col-xs-4 col-sm-4 col-md-4 col-lg-4">
           <span> Контакты </span>
         </div>
         <div class="header  buttons signup mobile col-xs-4 col-sm-4 col-md-4 col-lg-4">
-          <span> Регистрация </span>
+          <span> <%= link_to "Регистрация", new_company_path %> </span>
         </div>
         <div class="header buttons about mobile search-form col-xs-4 col-sm-4 col-md-4 col-lg-4">
           <%= form_tag("/search", method: "get") do %>
