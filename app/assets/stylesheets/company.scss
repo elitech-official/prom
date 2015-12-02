@@ -1,3 +1,160 @@
-// Place all the styles related to the Company controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+        
+
+.user-wrap{
+  & h3{
+    text-align:center;}
+
+  & .user-name{
+    margin-bottom: 20px;
+    background: #E8FCE6;
+     box-shadow: 0px 0px 7px 3px #999;
+    & .place-name{
+      margin:0px;
+      padding-top:15px;
+      
+     }
+   
+    & .place-text{
+      width: 90%;
+      height: 150px;
+      resize: none;
+      margin-bottom: 15px;
+    }
+  }
+
+  & .user-place{
+    background: #E8FCE6;
+     box-shadow: 0px 0px 7px 3px #999;
+      & .place-web-text{
+        font-size: 1.2vw;
+        display:block;
+        float:left; 
+        padding-top: 10px;      
+      }
+    }
+  & .user-company{
+    background: #E8FCE6;
+     box-shadow: 0px 0px 7px 3px #999;
+    margin-top:20px;
+    margin-left: -15px;
+    margin-bottom:20px;
+    text-align:center;
+    }
+  }
+  
+ .name-wrap{ width: 70%;}
+ .paper-wrap{
+    width: 35%;
+    float:left;
+    margin-bottom:5px;
+ }
+ .cat-wrap{ 
+   width: 30%;
+   float:left;
+   margin-bottom:5px;
+ }
+ .sub-name{ 
+   width: 30%;
+   float:left;
+   margin-bottom:5px;
+ }
+ .city-wrap{
+    margin-bottom:5px;
+ }
+ .addres-wrap{
+   width: 33%;
+   float:left;
+ }
+ .phone-wrap{
+   width: 33%;
+   float:left;
+ }
+ .phone-wrap{
+   width: 33%;
+   float:left;
+ }
+ .type-wrap{
+   width: 25%;
+   float:left;
+ }
+ .year-wrap{
+   width: 25%;
+   float:left;
+ }
+ .budget-wrap{
+   width: 25%;
+   float:left;
+   }
+  .employee-wrap{
+    width: 25%;
+   float:left;
+   }
+.user-comp-img{
+    background: #E8FCE6;
+    margin-left:-15px;
+     box-shadow: 0px 0px 7px 3px #999;
+    & .user-image{
+      width: 50%;
+      margin:0 auto;
+      margin-top: 10px;
+      float:left;
+        & p{
+          display:block;
+         }
+       }
+}
+.user-image:firt-child{
+  float:left;
+}
+.place-zone{
+    & input{
+      border-width:1px;
+      border-radius:10px;
+      height: 30px;
+      margin-bottom:10px;
+      }
+}
+
+
+.place-zone input:hover{
+   box-shadow: inset 0px 0px 7px 3px #D9FFE6;
+   }
+   
+.place-zone input:focus{
+   box-shadow: inset 0px 0px 7px 3px #D9FFE6;
+   }
+.place-text:hover{
+   box-shadow: inset 0px 0px 7px 3px #D9FFE6;
+   }
+   .place-text:focus{
+   box-shadow: inset 0px 0px 7px 3px #D9FFE6;
+   }
+.place-foto{
+    & input{
+      border-width:1px;
+      border-radius:10px;
+      height: 35px;
+      margin-bottom: 15px;
+      }
+}  
+.place-foto input:hover{
+   box-shadow: inset 0px 0px 7px 3px #D9FFE6;
+   }
+.place-foto input:focus{
+   box-shadow: inset 0px 0px 7px 3px #D9FFE6;
+   }
+     
+ .button{
+   width:15%;
+     & p {
+      width:180px;
+      height:35px;
+      margin-top:5px;
+      
+      }
+    }
+   
+  .button  p :hover{
+   box-shadow: inset 0px 0px 7px 3px #D9FFE6;
+     }
+ .clear{clear:both;}
