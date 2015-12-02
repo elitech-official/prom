@@ -1,3 +1,14 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.imaged-placeholder{
+  background: image-url('landing_placeholder.jpg') no-repeat;
+  background-size: cover;
+  height: 460px;
+  padding-top: 120px;
+}
+
+.container.language{
+  color: white;
+}

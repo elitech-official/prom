@@ -29,10 +29,9 @@
 </div>
 <div class="search-form text-center col-xs-12 col-sm-12 col-md-12 col-lg-12">
   <%= form_tag("/search", method: "get") do %>
-  <%= label_tag(:q, "Search for:") %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Search") %>
-<% end %>  
+	  <input type="search" name="q" placeholder="Найти..." >
+      <input type="submit" value="">
+  <% end %>  
 </div>
 <div class="horline-header col-xs-12 col-sm-12 col-md-12 col-lg-12">
 </div>
