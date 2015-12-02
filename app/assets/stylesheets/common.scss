@@ -3,7 +3,6 @@
 *{
   padding: 0;
   margin: 0;
-    font-family: SourceSansPro-Regular;
   }
 
 
@@ -95,7 +94,7 @@ a{
     margin-top: 50px;
   }
   & .left{
-    //border-right: 1px solid black;
+    
   }
   & .logo{
     margin-top: 10px;
@@ -190,10 +189,15 @@ a{
   display: inline-block;
   height: 50%;
   padding: 0;
-  & .category-item-image{
-    padding: 10px;
+  & .block{
+    
   }
-    & .category-image-small{
+  
+  & .category-item-image{
+    
+   // padding: 10px;
+  }
+  & .category-image-small{
     width: 100%;
     max-height: 100px;
   }
@@ -352,6 +356,7 @@ a{
     padding: 0;
   }
   & span{
+    font-family: impact;
     font-weight: 100;
     font-size: 1.5vw;
     letter-spacing: 2px;
@@ -599,6 +604,7 @@ a{
         background-color: #D3D3D3;
         font-size: 1.1vw;
         font-weight: 300;
+        font-family: Impact;
       }
       &:hover{
         cursor: pointer;
@@ -722,6 +728,7 @@ td.glyph{
         display: block;
         font-size: 1.5vw;
         color: green;
+        font-family: impact;
         letter-spacing: 3px;
       }
 .easy{
@@ -763,6 +770,7 @@ td.glyph{
   padding-left: 25px;
   font-size: 3vw;
   font-weight: 300;
+  font-family: impact;
   letter-spacing: 2px;
   color: #191970;
 }
@@ -770,9 +778,7 @@ span.name.block{
   font-size: .8vw;
   font-weight: 600;
 }
-.category-item-image{
-  opacity: .7;
-}
+
 .category-item:hover > span.name.block{
   color: white;
 }
@@ -816,6 +822,7 @@ span#year, span#comp_type, span#business{
       box-shadow: 0px 0px 7px 3px #999;
       
       & .blog-header{
+        font-family: Tahoma;
         font-size: 1.3vw;
        }
       & .blog-theme{
@@ -924,7 +931,24 @@ span#year, span#comp_type, span#business{
       font-size:2.6vw;
     }
    }
-  
+  .button-text-f{
+    font-size: 2.8vw !important;
+  }
+  .phone-number{
+    font-size:3.5vw !important;
+  }
+  .advert{
+     & .text{ 
+       & .register-link{
+          font-size: 3.5vw !important;
+       }
+     }
+   }
+  .address-info{
+           & .title{
+             font-size:2.8vw !important;
+           }
+         }    
 }
 @media all and (min-width: 421px) and (max-width: 768px){
      .header.socials{
@@ -993,7 +1017,26 @@ span#year, span#comp_type, span#business{
         font-size:2.3vw;
       }
    }
+   .button-text-f{
+    font-size: 2.8vw !important;
+  }
+  .phone-number{
+    font-size:3.5vw !important;
+  }
 
+.advert{
+     & .text{ 
+       & .register-link{
+          font-size: 3.5vw !important;
+       }
+     }
+   }
+
+.address-info{
+           & .title{
+             font-size:2.8vw !important;
+           }
+         }    
 }
  @media all and (min-width: 768px) and (max-width: 1280px){
     .header.buttons{
@@ -1014,13 +1057,13 @@ span#year, span#comp_type, span#business{
   .right-sidebar{
     & .contacts{
       & h3{
-        font-size:4.2vw;
+        font-size:2.1vw;
       }
       & .send-contacts{
                     
          & .address-info{
            & .title{
-             font-size:3.5vw;
+             font-size: 1.3vw;
            }
          }    
       }
@@ -1032,7 +1075,7 @@ span#year, span#comp_type, span#business{
           }
           & .button-text{
             & .button-text-f{
-              font-size: 2.6vw;
+              font-size: 1.2vw;
             }
            }
           }
@@ -1045,7 +1088,7 @@ span#year, span#comp_type, span#business{
        }
      }
      & .phone-number{
-       font-size: 3.5vw;
+       font-size: 1.5vw;
      }
    }
    .arrow{
@@ -1062,7 +1105,7 @@ span#year, span#comp_type, span#business{
    .advert{
      & .text{ width:100%;
        & a{
-          font-size: 3.3vw;
+          font-size: 2vw;
        }
      }
    }
