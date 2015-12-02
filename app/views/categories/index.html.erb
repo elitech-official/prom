@@ -20,14 +20,17 @@
   </div>
   <% @blogs.each do |blog| %>
   	<div class="blog-container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><p class="blog-theme"> Тема: <%= blog.theme %> </p> </div>
   		<h3 class="blog-header"> <%= blog.title %> </h3>
-  		<p class="blog-theme"> Тема: <%= blog.theme %> </p>
-  		<%= image_tag blog.thumb, class: "blog-image"%>
-  		<p class="blog-text"> <%= blog.text%> </p>
-  		<a class="blog-more"> Read more </a>
-  		</br>
-  		<p class="blog-author"> Автор: <%= blog.author %> </p>
-  		<p class="blog-time"><%= blog.created_at %></p>
+  		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  			<% if blog.thumb %><%= image_tag blog.thumb, class: "blog-image"%> <% end %>
+  			<p class="blog-text"> <%= blog.text%> </p>
+  		</div>
+  		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><a class="blog-more"> Read more <span class="glyphicon glyphicon-chevron-right"> </a> </div>
+  		<div class=" blog-time-div col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  			<p class="blog-author"> Автор: <%= blog.author %> </p>
+  			<p class="blog-time"><%= blog.created_at.strftime("%H:%M, %F") %></p>
+  		</div>
     </div>
   <% end %>
   

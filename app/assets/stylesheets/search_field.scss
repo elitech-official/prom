@@ -1,12 +1,13 @@
 
 .search-form{
+  float: left;
 & input[type="search"] {
     border: none; 
     outline: none; 
     -webkit-appearance: none; 
-    width: 320px; 
+    width: 100%; 
     padding-left: 20px;
-    padding-right: 60px;
+    padding-right: 50px;
     vertical-align: middle; 
     height: 40px;
     font-size: 25px;
@@ -16,7 +17,7 @@
     width: 30px; 
     height: 30px; 
     border: none; 
-    margin-left: -60px;
+    margin-left: -50px;
     background: image-url('icons/347.png') no-repeat center center; 
     background-size: cover;
  }

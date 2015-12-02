@@ -21,17 +21,14 @@
         <div class="header  buttons signup mobile col-xs-4 col-sm-4 col-md-4 col-lg-4">
           <span> Регистрация </span>
         </div>
-        <div class="header buttons about mobile col-xs-4 col-sm-4 col-md-4 col-lg-4">
-          <span> О нас </span>
+        <div class="header buttons about mobile search-form col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <%= form_tag("/search", method: "get") do %>
+	  		<input type="search" name="q" placeholder="Найти..." >
+      		<input type="submit" value="">
+  		  <% end %> 
         </div>
       </div>
     </div>
-</div>
-<div class="search-form text-center col-xs-12 col-sm-12 col-md-12 col-lg-12">
-  <%= form_tag("/search", method: "get") do %>
-	  <input type="search" name="q" placeholder="Найти..." >
-      <input type="submit" value="">
-  <% end %>  
 </div>
 <div class="horline-header col-xs-12 col-sm-12 col-md-12 col-lg-12">
 </div>
