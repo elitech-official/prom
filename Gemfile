@@ -37,6 +37,7 @@ gem 'capistrano-rvm'
 gem 'passenger'
 gem 'faker'
 gem 'simple_captcha2', require: 'simple_captcha'
+gem 'acts-as-taggable-on', '~> 3.4'
 group :assets do
   gem 'execjs'
   gem 'therubyracer'

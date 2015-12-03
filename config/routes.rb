@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'search/perform'
 
   scope "(:locale)", locale: /en|fr|ru|ua/ do
+    get 'tags/:tag', to: 'companies#index', as: :tag
     resources :categories
     resources :companies
     resources :subcategories
@@ -13,6 +14,7 @@ Rails.application.routes.draw do
     get '/companies/:id/map', to: 'company#map', as: :comp_map
     get '/companies/:id/about', to: 'company#main_page', as: :comp_about
     get '/companies/:id/documents', to: 'company#documents', as: :comp_docs
+    
   end
   
   get '/:locale' => 'pages#index'

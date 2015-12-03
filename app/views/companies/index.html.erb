@@ -1,0 +1,6 @@
+<div class="companies container col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+  <h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> По ключевому слову <%= @tag %> найдено <%= @companies.count %> записей
+  <% @companies.each do |company|%>
+  <%= render partial: "companies/company", locals: {company: company}%>
+  <% end %>
+</div>
