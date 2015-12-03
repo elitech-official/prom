@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'blogs/index'
+
+  get 'blogs/show'
+
   ActiveAdmin.routes(self)
   devise_for :users, :controllers => {:registrations => "users"}
   get 'search/perform'
@@ -9,6 +13,7 @@ Rails.application.routes.draw do
     resources :categories
     resources :companies
     resources :subcategories
+    resources :blogs
     get '/main', to: 'pages#main', as: :localized_main
     get '/search', to: 'search#perform', as: :search
     get '/companies/:id/map', to: 'company#map', as: :comp_map

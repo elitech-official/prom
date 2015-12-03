@@ -22,7 +22,9 @@ class CompaniesController < ApplicationController
   end
 
   def create
-    @company = Company.create!(company_params)
+    @company = Company.create(company_params)
+    @company.category_id = params[:category_id]
+    @company.subcategory_id = params[:subcategory_id]
     if @company.save
       flash[:notice] = "Successfully created!"
       redirect_to categories_path
@@ -64,7 +66,7 @@ class CompaniesController < ApplicationController
   
   def company_params
     params.require(:company).permit(:name, :category_id, :phone, :website, :address, :budget, :employee_count, :subcategory_id, :image_path, :description, :country,
-     :year_created, :comp_type, :business, :website_image_path, :mobile_phone, :user_id, :city_id, :paper_image, :tag_list)
+     :year_created, :comp_type, :business, :website_image_path, :mobile_phone, :user_id, :city_id, :paper_image, :tag_list, category_params: [:category_id])
   end
   
 end

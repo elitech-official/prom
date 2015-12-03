@@ -1,0 +1,14 @@
+
+<div class="blog-container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><p class="blog-theme"> Тема: <%= link_to @blog.theme, blogs_path(theme: @blog.theme) %> </p> </div>
+  		<h3 class="blog-header"> <%=link_to @blog.title, blog_path(id: @blog.id) %> </h3>
+  		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  			<% if @blog.thumb %> <a href="<%= blog_path( id: @blog.id ) %>"><%= image_tag @blog.thumb, class: "blog-image"%> </a> <% end %>
+  			<p class="blog-text"> <%= @blog.text%> </p>
+  		</div>
+  		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><a class="blog-more"> Read more <span class="glyphicon glyphicon-chevron-right"> </a> </div>
+  		<div class=" blog-time-div col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  			<p class="blog-author"> Автор: <%= link_to @blog.author, blogs_path(author: @blog.author) %> </p>
+  			<p class="blog-time"><%= @blog.created_at.strftime("%H:%M, %F") %></p>
+  		</div>
+    </div>

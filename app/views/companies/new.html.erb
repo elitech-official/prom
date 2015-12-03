@@ -75,7 +75,7 @@
 		</div>		
 		<div class="year-wrap">
 			<p class="place-zone">
-				 <%= f.text_field :comp_type, :placeholder => "Год основания",
+				 <%= f.text_field :year_created, :placeholder => "Год основания",
 				 :class => " place-gold" %>
 			</p>
 		</div>
@@ -87,43 +87,61 @@
 		</div>
 		<div class="budget-wrap">
 			<p class="place-zone">
-				
 				<%= f.text_field :budget, :placeholder => "Годовой оборот",
 				 :class => " place-gold" %>
 			</p>
 			</div>
 			<div class="clear"> </div>
 		</div>
-		
 			<div class="user-comp-img col-xs-11 col-sm-11 col-md-11 col-lg-11">
 				 <h3>Изображения</h3>
 				<%= f.fields_for :company_images do |builder| %>
-			 
-				<%if builder.object.new_record? %>
-				
-				
-				
-				<div class="user-image">
-				 
-				<p >
-				<%= builder.file_field :photo %>
-				</p>
-				 <p class="place-foto">
-				 <%= builder.text_field :caption, :placeholder => "информация", :class => "place-f" %>
-				</p>
-				 
-				</div>
-				
-				 
+					<%if builder.object.new_record? %>
+					<div class="user-image"> 
+					<p >
+					<%= builder.file_field :photo %>
+					</p>
+					 <p class="place-foto">
+					 <%= builder.text_field :caption, :placeholder => "информация", :class => "place-f" %>
+					</p>	 
+					</div>
 				<% end %>
 			  <% end %>
-			
           </div>
- 	
- 	
  	<div class="user-comp-img col-xs-11 col-sm-11 col-md-11 col-lg-11">
 				 <h3>Ключевые слова (разделённые запятой)</h3>
 				 <%= f.text_field :tag_list%>
 	</div>
 <div class="button-comp col-xs-11 col-sm-11 col-md-11 col-lg-11 text-center"> <p><%= f.submit "Регистрация" %> </p> </div>
 <% end %>
+
+<script>
+$('select[data-option-dependent=true]').each(function(i) {
+  var key_method, observed, observed_dom_id, observer, observer_dom_id, prompt, regexp, url_mask, value_method;
+  observer_dom_id = $(this).attr('id');
+  observed_dom_id = $(this).data('option-observed');
+  url_mask = $(this).data('option-url');
+  key_method = $(this).data('option-key-method');
+  value_method = $(this).data('option-value-method');
+  prompt = $(this).has('option[value]').size() ? $(this).find('option[value]') : $('<option value="">').text('Выберите подкатегорию');
+  regexp = /:[0-9a-zA-Z_]+:/g;
+  observer = $('select#' + observer_dom_id);
+  observed = $('#' + observed_dom_id);
+  if (!observer.val() && observed.size() > 1) {
+    observer.attr('disabled', true);
+  }
+  observed.on('change', function() {
+    var url;
+    observer.empty().append(prompt);
+    if (observed.val()) {
+      url = url_mask.replace(regexp, observed.val());
+      $.getJSON(url, function(data) {
+        $.each(data, function(i, object) {
+          observer.append($('<option>').attr('value', object[key_method]).text(object[value_method]));
+          observer.attr('disabled', false);
+        });
+      });
+    }
+  });
+});
+</script>

@@ -7,6 +7,9 @@
 
 .navbar{
   z-index:999999;
+  & span.glyphicon{
+    padding-left: 5px;
+  }
 }
 
 body{
@@ -818,11 +821,17 @@ span#year, span#comp_type, span#business{
 }
 
       /*--------блог--------*/
-.advertisement{
-    & .advert-header{
+    .advert-header{
       font-size: 1.5vw;
     }
-    & .blog-container{
+     .blog-container{
+       & a{
+         color: #808080;
+         &:hover{
+           color: black;
+           transition: .5s ease;
+         }
+       }
       background: #FFF;
       position:relative;
       margin-bottom: 15px;
@@ -903,7 +912,6 @@ span#year, span#comp_type, span#business{
       }
       
     }
-}
 
 
 
