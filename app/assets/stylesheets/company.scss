@@ -110,8 +110,8 @@
 .place-zone{
     & input{
       border-width:1px;
-      border-radius:10px;
-      height: 30px;
+      border-radius:5px;
+      height: 40px;
       margin-bottom:10px;
       }
 }
@@ -133,7 +133,7 @@
 .place-foto{
     & input{
       border-width:1px;
-      border-radius:10px;
+      border-radius:5px;
       height: 35px;
       margin-bottom: 15px;
       }
@@ -164,3 +164,127 @@
    box-shadow: inset 0px 0px 7px 3px #D9FFE6;
      }
  .clear{clear:both;}
+ 
+
+  /*--------Медиа запросы-------*/
+@media all and (max-width: 420px){
+  .type-wrap, .year-wrap, .employee-wrap, .budget-wrap, .addres-wrap, .phone-wrap, .name-wrap, .cat-wrap, .paper-wrap, .sub-name{
+    float:none;
+    width: 100%;
+  }
+  .place-zone{
+    & input{width: 100%;}  
+  }
+  .place-name{
+    & input{width: 100%;}  
+  }
+  .place-text{
+    height:100px !important;
+    width: 100% !important;
+  }
+  
+  .user-image{
+    float:none !important;
+    width: 100% !important;
+  }
+  .place-foto{
+    & input{width: 100% !important;}  
+  }
+  .button-comp, .user-comp-img, .user-company, .user-place, .user-name{
+    margin:0 auto;
+    margin-top: 20px;
+    margin-bottom: 0px !important;
+  }
+  .user-company{
+    margin-left:0px !important;
+  }
+}
+@media all and (min-width: 421px) and (max-width: 768px){
+  .addres-wrap, .phone-wrap, .name-wrap, .cat-wrap, .paper-wrap, .sub-name, .type-wrap, .year-wrap, .employee-wrap, .budget-wrap{
+    float:none;
+    width: 100%;
+  }
+ .user-image{
+   & input{
+     font-size:2vw;
+   }
+ } 
+  .place-foto{
+    & input{
+      width:90%;
+    }
+  }
+  .media{
+    padding-left:35px;
+  }
+  .place-zone{
+    text-align:center;
+  }
+  .city-wrap{
+    & p{
+      text-align:center;
+    }
+  }
+  .place-zone{
+    & input{
+       width:70%;
+    }
+  }
+  .paper-wrap{
+    & input{
+      margin:0 auto;
+    }
+  }
+  .sub-name, .cat-name{
+    text-align: center;
+  }
+  .place-text{
+    width: 100% !important;
+    height: 90px !important; 
+  }
+  .button-comp, .user-comp-img, .user-company, .user-place, .user-name{
+    margin:0 auto;
+    margin-top: 20px;
+    margin-bottom: 0px !important;
+  }
+  
+  .user-company{
+    margin-left:0px !important;
+  }
+  
+}
+@media all and (min-width: 768px) {
+  .place-name{
+     & input{
+    width:80%;}
+  }
+  .type-wrap, .year-wrap, .employee-wrap, .budget-wrap{
+    width:50%;
+  }
+  .city-wrap{
+    text-align:center;
+  }
+  
+  .addres-wrap, .phone-wrap{
+    text-align:center;
+  }
+  .button-comp, .user-comp-img, .user-company, .user-place, .user-name{
+    margin:0 auto;
+    margin-top: 20px;
+    margin-bottom: 0px !important;
+  }
+  .user-company{
+    margin-left:0px !important;
+  }
+  
+  .place-foto{
+      text-align:center;
+      & input{
+        width:70%;
+     }
+   } 
+    .place-d{
+      margin:0 auto;
+    }
+  
+}

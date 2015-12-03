@@ -4,13 +4,13 @@ default: &default
   pool: 5
   timeout: 5000
   username: root
-  password: default_password
+  password: antip
 
 development:
   <<: *default
   database: prom_dev
   username: root
-  password: default_password
+  password: antip
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -23,4 +23,4 @@ production:
   <<: *default
   database: prom_production
   username: root
-  password: default_password
+  password: antip

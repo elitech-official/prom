@@ -217,7 +217,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfc5ff', end
 .category-item-image:hover{
   & .block{
     opacity:1;
-    transition: ease-out 0.8s    
+    transition: ease-out 0.4s    
   }
 }
 .category.container{
@@ -1004,6 +1004,8 @@ span#year, span#comp_type, span#business{
              font-size:2.8vw !important;
            }
          }    
+   
+         
 }
 @media all and (min-width: 421px) and (max-width: 768px){
      .header.socials{
