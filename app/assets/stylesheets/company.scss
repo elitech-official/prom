@@ -165,7 +165,18 @@
      }
  .clear{clear:both;}
  
-
+ .user-comp-img{
+   & input{
+   border-width:1px;
+   border-radius:5px;
+   height: 35px;
+   width: 100%;
+    margin-bottom: 15px;}
+ }
+.user-comp-img input:hover{
+  
+   box-shadow: inset 0px 0px 7px 3px #D9FFE6;
+   }
   /*--------Медиа запросы-------*/
 @media all and (max-width: 420px){
   .type-wrap, .year-wrap, .employee-wrap, .budget-wrap, .addres-wrap, .phone-wrap, .name-wrap, .cat-wrap, .paper-wrap, .sub-name{
@@ -285,6 +296,7 @@
    } 
     .place-d{
       margin:0 auto;
+      text-align:center;
     }
   
 }
