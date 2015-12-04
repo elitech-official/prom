@@ -6,7 +6,7 @@ class CategoriesController < ApplicationController
   
   def index
     @blogs = Blog.last(5).reverse
-    @categories = Category.all.paginate(:page => params[:page], :per_page => 10)
+    @categories = Category.all.paginate(:page => params[:page], :per_page => 8)
   end
   
   def new

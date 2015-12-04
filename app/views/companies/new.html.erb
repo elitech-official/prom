@@ -94,7 +94,7 @@
 			<div class="clear"> </div>
 		</div>
 
-			<div class="user-comp-img col-xs-11 col-sm-11 col-md-11 col-lg-11">
+			<div class="user-comp-img col-xs-12 col-sm-12 col-md-11 col-lg-11">
 				 <h3>Изображения</h3>
 				<%= f.fields_for :company_images do |builder| %>
 					<%if builder.object.new_record? %>
@@ -112,7 +112,7 @@
           </div>
 
 
- 	<div class="user-comp-img col-xs-11 col-sm-11 col-md-11 col-lg-11">
+ 	<div class="user-comp-img col-xs-12 col-sm-12 col-md-11 col-lg-11">
 
 				 <h3>Ключевые слова (разделённые запятой)</h3>
 				 <%= f.text_field :tag_list%>

@@ -6,3 +6,6 @@ ru:
     blog: Блог
   footer:
     lorem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis consectetur lorem. Nullam feugiat tellus sit amet ligula sodales, vitae iaculis magna facilisis. Praesent viverra felis ut scelerisque fermentum. Aenean vitae tellus finibus, sodales metus a, lobortis tortor. Suspendisse porttitor dolor eget tincidunt sollicitudin. Suspendisse ac dolor cursus, faucibus libero nec, imperdiet erat. Sed mattis suscipit turpis. Suspendisse potenti. Fusce quis eleifend leo. Donec venenatis sapien magna, vitae suscipit ipsum porttitor quis. Ut nec consequat nisl. Ut at felis ultrices lacus euismod consectetur. Donec ullamcorper augue in neque vestibulum, vitae elementum felis cursus. Vivamus scelerisque lorem sit amet ligula aliquam, a luctus enim consectetur. Donec nulla tortor, finibus in lorem id, luctus aliquet elit."
+  will_paginate:
+    previous_label: "Назад"
+    next_label: "Вперёд"

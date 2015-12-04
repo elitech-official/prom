@@ -31,6 +31,10 @@ a{
   }
 }
 
+.header.socials{
+     padding-top: 25px;
+}
+
 .body-placeholder{
   background: #bfc5ff;
 background: -moz-linear-gradient(left, #bfc5ff 0%, #ffffff 23%, #ffffff 77%, #bfc5ff 100%);
@@ -192,6 +196,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfc5ff', end
 
 .category-item{
   display: inline-block;
+  margin-top: 10px;
   height: 50%;
   padding: 0;
   position:relative;
