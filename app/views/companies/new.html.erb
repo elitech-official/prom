@@ -1,7 +1,7 @@
 <%= form_for @company, :html => {:multipart => true } do |f| %>
 
  <div class="user-wrap container">
- 	<div class="user-name row col-xs-11 col-sm-11 col-md-11 col-lg-11" >
+ 	<div class="user-name row col-xs-12 col-sm-12 col-md-11 col-lg-11" >
  		 <h3>Общая информация</h3>
  	<div class="name-wrap">
 		<p class="place-zone place-name">
@@ -39,7 +39,7 @@
 	 :class => "place-text"%>
 	</p>
 	</div>
-	<div class="user-place row col-xs-11 col-sm-11 col-md-11 col-lg-11">
+	<div class="user-place row col-xs-12 col-sm-12 col-md-11 col-lg-11">
 		 <h3>Контакты</h3>
 	<div class="city-wrap">	 
 		<p>
@@ -62,15 +62,15 @@
 		<%= f.text_field :website, :placeholder => "Адрес web-сайта"%>
 		 </p>
 	</div>	
-	 <p class="place-web-text"> У вас нет вебсайта? Закажите его у нас! /ссылка на наш собственный сайт/ </p>
+	 <!-- <p class="place-web-text"> У вас нет вебсайта? Закажите его у нас! /ссылка на наш собственный сайт/ </p> -->
 	
   	</div>
-	<div class="user-company col-xs-11 col-sm-11 col-md-11 col-lg-11">
-		 <h3>Дополнитеьная информация о предприятии</h3>
+	<div class="user-company col-xs-12 col-sm-12 col-md-11 col-lg-11">
+		 <h3>Дополнительная информация о предприятии</h3>
 		<div class="type-wrap">
 			<p class="place-zone type">
 				<%= f.text_field :comp_type, :placeholder => "Тип предприятия",
-				 :class => "place-zone place-gold " %>
+				 :class => "place-gold " %>
 			</p>
 		</div>		
 		<div class="year-wrap">
@@ -93,6 +93,7 @@
 			</div>
 			<div class="clear"> </div>
 		</div>
+
 			<div class="user-comp-img col-xs-11 col-sm-11 col-md-11 col-lg-11">
 				 <h3>Изображения</h3>
 				<%= f.fields_for :company_images do |builder| %>
@@ -105,14 +106,19 @@
 					 <%= builder.text_field :caption, :placeholder => "информация", :class => "place-f" %>
 					</p>	 
 					</div>
+
 				<% end %>
 			  <% end %>
           </div>
+
+
  	<div class="user-comp-img col-xs-11 col-sm-11 col-md-11 col-lg-11">
+
 				 <h3>Ключевые слова (разделённые запятой)</h3>
 				 <%= f.text_field :tag_list%>
 	</div>
-<div class="button-comp col-xs-11 col-sm-11 col-md-11 col-lg-11 text-center"> <p><%= f.submit "Регистрация" %> </p> </div>
+<div class="button-comp col-xs-12 col-sm-12 col-md-11 col-lg-11 text-center"> <p><%= f.submit "Регистрация" %> </p> </div>
+
 <% end %>
 
 <script>
