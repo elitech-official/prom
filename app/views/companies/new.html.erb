@@ -43,7 +43,7 @@
 		 <h3>Контакты</h3>
 	<div class="city-wrap">	 
 		<p>
-		<%= select_tag :city, options_from_collection_for_select(City.all, "id", "name"),
+		<%= select_tag :city_id, options_from_collection_for_select(City.all, "id", "name"),
 		:prompt => "Выберите город" %>
 		</p>
 	</div>

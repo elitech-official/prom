@@ -24,6 +24,7 @@ class CompaniesController < ApplicationController
   def create
     @company = Company.create(company_params)
     @company.category_id = params[:category_id]
+    @company.city_id = params[:city_id]
     @company.subcategory_id = params[:subcategory_id]
     if @company.save
       flash[:notice] = "Successfully created!"
