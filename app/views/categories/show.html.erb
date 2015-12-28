@@ -1,11 +1,11 @@
-<div class="category container col-xs-12 col-sm-8 col-md-8 col-lg-8">
-  <div class="item">
-    <div class="something col-xs-12 col-sm-6 col-md-6 col-lg-6"><h3> <%= @category.name %> </h3> </div>
-    <div class="something col-xs-12 col-sm-6 col-md-6 col-lg-6"><%= image_tag @category.image_path%></div>
-    <div class="something col-xs-12 col-sm-12 col-md-12 col-lg-12"><p> Здесь должны быть данные по данной отрасли в Харьковской области, графики и диаграммы </p></div>
-  </div>
-  <div class="subcategories container col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <div class="something col-xs-12 col-sm-12 col-md-12 col-lg-12"> Доступны следующие подразделы: </div>
+<div class="category container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="something  col-sm-push-2 col-md-push-2 col-lg-push-2 col-xs-12 col-sm-8 col-md-8 col-lg-8">
+    	<span class="absolute-subcategory"> 
+    		<%= @category.name %> 
+    	</span> 
+    	<%= image_tag @category.image_path%>
+    </div>
+  <div class="subcategories container col-sm-push-2 col-md-push-2 col-lg-push-2 col-xs-12 col-sm-8 col-md-8 col-lg-8">
     <% @subcategories.each do |subcategory|%>
     <%= render partial: 'subcategories/subcategory', locals: {subcategory: subcategory} %>
     <% end %>

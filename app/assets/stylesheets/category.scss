@@ -1,3 +1,94 @@
-// Place all the styles related to the Category controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$general_green: #3CB371;
+$secondary-green:  #2E8B57;
+
+.categories.items{
+        border-bottom: 1px solid black;
+      box-shadow: 0 0 10px;
+      background-color: white;
+      & .pages{
+        border: none;
+        box-shadow: none;
+      }
+}
+
+.rekl{
+  margin: 15px 0 15px 0;
+  background-color: $general_green;
+      text-align: center;
+  & .rekl-text{
+    line-height: 50px;
+    font-size:  36px;
+    color: white;
+  }
+}
+.category-item{
+  & .category-item-image{
+    padding: 0;
+  }
+  margin-bottom: 15px;
+    & span{
+      display: none;
+    }
+    & .category-image-small{
+      width: 100%;
+      max-width: 350px;
+      height: 120px
+    }
+    & a:hover  + span.name.block{
+      display: block!important;
+    }
+}
+
+span.name.block{
+  position: absolute;
+  top:0;
+  left: 0;
+  background-color: $general_green;
+  color: white;
+  font-weight: 700;
+  &:hover{
+    display: block;
+  }
+}
+ .blog-container{
+  background-color: white;
+}
+
+@media all and (max-width: 550px){
+  .category-item{
+    width: 50%!important;
+  }
+  .name.block{
+    font-size: 14px;
+  }
+}
+
+@media all and (max-width: 321px){
+  .category-item{
+    width: 100%!important;
+  }
+  .name.block{
+    font-size: 18px;
+  }
+}
+
+
+//-------------------------------- SUBCATEGORIES LIST --------------------------------------//
+
+
+.category.container{
+  
+  & .item{
+    & img{
+      width: 100%;
+      margin: 0 auto;
+      max-height: 400px;
+      min-height: 150px;
+      margin: 0 auto;
+    }
+  }
+  & .something{
+    margin: 0 auto;
+    padding: 0;
+  }
+}

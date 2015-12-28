@@ -1,0 +1,72 @@
+.float-left{
+  float: left
+}
+
+.float-right{
+  float:right;
+}
+
+.container{
+  padding: 0;
+}
+
+.container.header{
+  & .title{
+    & img{
+      width: 50px;
+      height: 50px;
+      text-align: left;
+    }
+    & span{
+      font-size: 35px;
+      line-height: 50px;
+    }
+  }
+  & .credentials{
+    height: 58px;
+    line-height: 58px;
+    & div{
+      & a{
+        color: #808080;
+        &:hover{
+          color: blue
+        }
+        &:hover > .glyphicon{
+          color: blue;
+        }
+      }
+    }
+    text-align: right;
+    font-size: 17px;
+  }
+}
+
+.nav.navbar-nav{
+  width: 100%;
+  & li.search-li{
+    float: right;
+    padding-right: 30px;
+  }
+}
+
+.about{
+  padding-top: 25px;
+  & .about-left, .about-right, .about-center{
+    padding-bottom: 15px;
+  }
+  & img{
+    width: 200px;
+    height: 200px;
+  }
+  & .text-justify{
+    padding: 0;
+  }
+  & .about-header{
+    min-height: 70px;
+    display: block;
+    width: 100%;
+    margin: 10px 0 10px 0;
+    font-size: 24px;
+    font-weight: 600;
+  }
+}

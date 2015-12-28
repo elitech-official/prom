@@ -1,20 +1,12 @@
+<div class="podlojka col-xs-12 col-sm-12 col-md-12 col-lg-12">
 <div class="company-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <div class=" company-item-title col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <%= link_to company.name, company_path(id: company.id) %>
-      </div> 
-      <div class="company-item-image col-xs-12 col-sm-3 col-md-3 col-lg-3">
+      <div class="company-item-image col-xs-3 col-sm-3 col-md-3 col-lg-2">
         <%= image_tag company.paper_image %>
+        <p class="company-item-address"> <%= company.address%> , Харьков </p>
       </div>
-      <div class="company-item-text col-xs-12 col-sm-6 col-md-6 col-lg-6">
-        <p class="description"> <%= company.description %> </p>
-        <p class="what-do"> What we do </p>
+      <div class="company-item-text col-xs-9 col-sm-9 col-md-9 col-lg-10">
+      	<p class="company-item-title"> <%= link_to company.name, company_path(id: company.id) %> </p>
+        <p class="company-item-description"> <%= company.description %> </p>
       </div>
-      <a href="http://<%= company.website %>">
-        <div class="company-item-website col-xs-12 col-sm-3 col-md-3 col-lg-3">
-          <%= image_tag company.website_image_path%>
-        </div>
-      </a>
-      <div class="company-item-address text-left col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <p> <%= company.address%> , Харьков </p>
-      </div>
+</div>
 </div>

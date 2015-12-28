@@ -1,31 +1,109 @@
-<div class="imaged-placeholder cols-xs-12 col-sm-12 col-md-12 col-lg-12">
-  <div class="container language col-xs-12 col-md-8 col-sm-8 col-lg-8">
-  <div class="text col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <h3 id="language-text-title"> Find <i> Your </i> business contract </h3>
-    <h4 id="language-text-desc"> Contact new partners, make deals, develop your business </h4>
-  </div>
-  <div class="langs container center col-xs-8 col-sm-8 col-md-6 col-lg-6">
-   <h4 id="language-text-panel"> Choose youre languages </h4>
-    <ul class="list">
-      <li class="item"> <%= link_to "Francais", categories_path(locale: "fr") %> </li>
-      <li class="item"> <%= link_to "English", categories_path(locale: "en") %>  </li>
-      <li class="item"> <%= link_to "Русский", categories_path(locale: "ru") %>  </li>
-      <li class="item"> <%= link_to "Украiнська", categories_path(locale: "ua") %>  </li>
-    </ul>
-   </div>
-  </div>
+<div class="index container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+	<div class="container-slider col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div id="wrapper">
+			<div id="carousel">
+				<%= image_tag 'carousel1.jpg'%>
+				<%= image_tag 'carousel2.jpg'%>
+				<%= image_tag 'carousel3.jpg'%>
+			</div>
+		</div>
+
+		<div class="container language col-xs-12 col-md-8 col-sm-8 col-lg-8">
+			<div class="text col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<h3 id="language-text-title"> Find <i> Your </i> business contract </h3>
+				<h4 id="language-text-desc"> Contact new partners, make deals, develop your business </h4>
+			</div>
+			<div class="langs container center col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<h4 id="language-text-panel"> Choose youre languages </h4>
+				<ul class="list">
+					<li class="item">
+						<%= link_to "Francais", categories_path(locale: "fr") %>
+					</li>
+					<li class="item">
+						<%= link_to "English", categories_path(locale: "en") %>
+					</li>
+					<li class="item">
+						<%= link_to "Русский", categories_path(locale: "ru") %>
+					</li>
+					<li class="item">
+						<%= link_to "Украiнська", categories_path(locale: "ua") %>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div class="about col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div class="about-left col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
+			<%= image_tag 'about-left.png'%>
+			<span class="about-header"> Что это за сайт? </span>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-justify">
+			<span> <%= t('footer.lorem') %> </span>
+			</div>
+		</div>
+		<div class="about-center col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
+			<%= image_tag 'about-center.png'%>
+			<span class="about-header"> Таргет-группа </span>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-justify">
+			<span> <%= t('footer.lorem') %> </span>
+			</div>
+		</div>
+		<div class="about-right col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
+			<%= image_tag 'about-right'%>
+			<span class="about-header"> В чём Ваша выгода? </span>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-justify">
+			<span> <%= t('footer.lorem') %> </span>
+			</div>
+		</div>
+	</div>
+	
 </div>
-  <div class="body-lang container col-xs-12 col-sm-8 col-md-8 col-lg-8">
-    <div class="body-lang text-center left col-xs-12 col-sm-4 col-md-4 col-lg-4">
-      <h3> Что это за сайт? </h3>
-      <span class="text-left"> <%= t('footer.lorem') %> </span>
-    </div>
-    <div class="body-lang text-center center col-xs-12 col-sm-4 col-md-4 col-lg-4">
-      <h3> Таргет-группа </h3>
-      <span class="text-left"> <%= t('footer.lorem') %> </span>
-    </div>
-    <div class="body-lang text-center right col-xs-12 col-sm-4 col-md-4 col-lg-4">
-      <h3> В чём профит? </h3>
-      <span class="text-left"> <%= t('footer.lorem') %> </span>
-    </div>
- </div>
+
+	<!--
+	<div class="clearfix">  </div>
+	<div class="body-lang container col-xs-12 col-sm-8 col-md-8 col-lg-8">
+	<div class="body-lang text-center left col-xs-12 col-sm-4 col-md-4 col-lg-4">
+	<h3> Что это за сайт? </h3>
+	<span class="text-left"> <%= t('footer.lorem') %> </span>
+	</div>
+	<div class="body-lang text-center center col-xs-12 col-sm-4 col-md-4 col-lg-4">
+	<h3> Таргет-группа </h3>
+	<span class="text-left"> <%= t('footer.lorem') %> </span>
+	</div>
+	<div class="body-lang text-center right col-xs-12 col-sm-4 col-md-4 col-lg-4">
+	<h3> В чём профит? </h3>
+	<span class="text-left"> <%= t('footer.lorem') %> </span>
+	</div>
+	</div>
+	<div class="clearfix">  </div>
+	-->
+
+	<script type="text/javascript">
+		$(function() {
+			var _direction = 'left';
+			$('#carousel').carouFredSel({
+				direction : _direction,
+				responsive : true,
+				circular : false,
+				items : {
+					width : 1200,
+					height : 'auto',
+					visible : {
+						min : 1,
+						max : 1
+					}
+				},
+				scroll : {
+					items : 1,
+					duration : 4000,
+					timeoutDuration : 4000,
+					pauseOnHover : 'immediate',
+					onEnd : function(data) {
+						_direction = (_direction == 'left' ) ? 'right' : 'left';
+						$(this).trigger('configuration', ['direction', _direction]);
+					}
+				}
+			});
+		});
+	</script>

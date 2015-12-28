@@ -2,17 +2,19 @@
 .search-form{
   float: left;
   margin: 10px 0 10px 0;
+  float: left;
 & input[type="search"] {
     border: none; 
     outline: none; 
     -webkit-appearance: none; 
-    width: 100%; 
+    width: 200px; 
     padding-left: 20px;
     padding-right: 50px;
     vertical-align: middle; 
     height: 25px;
     font-size: 20px;
     border-radius: 20px;
+    color: #333;
    }
 & input[type="submit"] {
     width: 20px; 

@@ -12,9 +12,6 @@
   }
 }
 
-body{
-  background-color: #DCDCDC;
-}
 a{
   text-decoration: none;
   &:link{
@@ -30,7 +27,7 @@ a{
     text-decoration: none;
   }
 }
-
+/*
 .header.socials{
      padding-top: 25px;
 }
@@ -824,8 +821,9 @@ span#year, span#comp_type, span#business{
   font-weight: 600;
   text-align: centerl
 }
-
+*/
       /*--------блог--------*/
+ /*
     .advert-header{
       font-size: 1.5vw;
     }
@@ -918,9 +916,11 @@ span#year, span#comp_type, span#business{
       
     }
 
-
+*/
 
                                 /*--------Медиа запросы-------*/
+
+/*
 @media all and (max-width: 420px){
  .header.socials{
       text-align: center;
@@ -1114,8 +1114,10 @@ span#year, span#comp_type, span#business{
     }
   }
    
-
+*/
  /*------sidebar------*/
+
+/*
   .right-sidebar{
     & .contacts{
       & h3{
@@ -1171,3 +1173,5 @@ span#year, span#comp_type, span#business{
        }
      }
    }
+   
+*/
